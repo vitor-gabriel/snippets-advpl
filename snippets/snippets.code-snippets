@@ -1,6 +1,6 @@
 {
     "Protheus doc": {
-        "prefix": "protheusdoc",
+        "prefix": "pdoc",
         "body": [
             "//-------------------------------------------------------------------",
             "/*/{Protheus.doc} ${1:function}",
@@ -14,10 +14,10 @@
         "description": "Protheus doc"
     },
     "While": {
-        "prefix": "while",
+        "prefix": "While",
         "body": [
             "While (${1:lCond})",
-            "\t$2",
+            "\t${processamento}",
             "End",
             "$0"
         ],
@@ -29,12 +29,12 @@
             "Local ${1:cQuery} := ''",
             "\t${1:cQuery} := 'query'",
             "\t${1:cQuery} := ChangeQuery(${1:cQuery})",
-            "dbUseArea(.T., 'TOPCONN', TCGenQry(, , ${1:cQuery}), alias, .F., .T.)",
-            "While alias->(!Eof())",
+            "dbUseArea(.T., 'TOPCONN', TCGenQry(, , ${1:cQuery}), ALIAS, .F., .T.)",
+            "While ALIAS->(!Eof())",
             "\t$2",
-            "\talias->(dbSkip())",
+            "\tALIAS->(DbSkip())",
             "EndDo",
-            "alias->(dbCloseArea())"
+            "ALIAS->(DbCloseArea())"
         ],
         "description": "Cria a função de Query ja efetuando a conexão com o TOP e efetuando o While"
     },
@@ -45,52 +45,12 @@
         ],
         "description": "Função de Help\nExemplo\nHELP(' ',1,'Help1' ,,'campo nao preenchido',2,0,,,,,, {'preencha o campo'})"
     },
-    "Static Function": {
-        "prefix": "StaticFunction",
-        "body": [
-            "/*/{Protheus.doc} ${1:nomeStaticFunction}",
-            "\t(long_description)",
-            "\t@type  Static Function",
-            "\t@author ${2:user}",
-            "\t@since ${3:date}",
-            "\t@version ${4:version}",
-            "\t@param ${5:param}, ${6:param_type}, ${7:param_descr}",
-            "\t@return ${8:return}, ${9:return_type}, ${10:return_description}",
-            "\t@example",
-            "\t(examples)",
-            "\t@see (links_or_references)",
-            "\t/*/",
-            " Static Function ${1:nomeStaticFunction}",
-            "Return ${8:return}"
-        ],
-        "description": "Declaração de uma Static Function ja com o Protheus.doc"
-    },
-    "Function": {
-        "prefix": "Function",
-        "body": [
-            "/*/{Protheus.doc} ${1:nomeFunction}",
-            "\t(long_description)",
-            "\t@type  Function",
-            "\t@author ${2:user}",
-            "\t@since ${3:date}",
-            "\t@version ${4:version}",
-            "\t@param ${5:param}, ${6:param_type}, ${7:param_descr}",
-            "\t@return ${8:return}, ${9:return_type}, ${10:return_description}",
-            "\t@example",
-            "\t(examples)",
-            "\t@see (links_or_references)",
-            "\t/*/",
-            " Function ${1:nomeFunction}",
-            "Return ${8:return}"
-        ],
-        "description": "Declaração de uma Function ja com o Protheus.doc"
-    },
     "Strtokarr2": {
         "prefix": "Strtokarr2",
         "body": [
             "Strtokarr2( ${1:cValue}, ${2:cToken}, ${3:lEmptyStr})"
         ],
-        "description": "Strtokarr2- Transforma uma String em um array,\n cValue := Caracter a ser separado\n cToken := Caracter a ser ultilizado na quebra \n lEmptyStr:= Se retorna elementos vazios"
+        "description": "Strtokarr2 - Transforma uma String em um array,\n cValue := Caracter a ser separado\n cToken := Caracter a ser ultilizado na quebra \n lEmptyStr:= Se retorna elementos vazios"
     },
     "Year": {
         "prefix": "Year",
@@ -160,7 +120,7 @@
         "body": [
             "MSParseError()"
         ],
-        "description": "MSParseError-Retorna o último erro encontrado ao executar a função MSParse().. MSParseError()"
+        "description": "MSParseError-Retorna o último erro encontrado ao executar a função MSParse(). MSParseError()"
     },
     "MSParseFull": {
         "prefix": "MSParseFull",
@@ -4358,11 +4318,25 @@
     "WhileTRB": {
         "prefix": "While em Tabela ADVPL",
         "body": [
-            "\tWhile ${tabela}->(!Eof())",
+            "\tWhile ${ALIAS}->(!Eof())",
             "\t\t${processamento}",
-            "\t\t${tabela}->(DbSkip())",
+            "\t\t${ALIAS}->(DbSkip())",
             "\tEndDo"
         ]
+    },
+    "_SetOwnerPrvt": {
+        "prefix": "_SetNamedPrvt",
+        "body": [
+            "_SetNamedPrvt('${1:cVar}',${2:xValue}"
+        ],
+        "description": "Cria uma variável private na função superior da pilha"
+    },
+    "_SetNamedPrvt": {
+        "prefix": "_SetNamedPrvt",
+        "body": [
+            "_SetNamedPrvt('${1:cVar}',${2:xValue},'${3:cFuncOwner}')"
+        ],
+        "description": "Cria uma variável private em uma das funções superiores na pilha, nomeada no 3 parâmetro"
     },
     "WhileJSON": {
         "prefix": "While em Tabela para JSON",
@@ -5311,68 +5285,68 @@
             "Return .F."
         ]
     },
-    "JsonObject:New": {
+    "JsonObject:new": {
         "prefix": "JsonObject - Construtor JavaScript Object Notation",
         "body": [
-            "${1:oJson} := JsonObject():New()"
+            "${1:oJson} := JsonObject():new()"
         ],
-        "description": "A classe JsonObject representa um objeto JSON (JavaScript Object Notation)."
+        "description": "A classe JsonObject representa um objeto JSON (JavaScript Object Notation). JsonObject():new()"
     },
-    "JsonObject:DelName": {
-        "prefix": "JsonObject - Metodo DelName",
+    "JsonObject:delName": {
+        "prefix": "JsonObject - Metodo delName",
         "body": [
-            "${1:oJson}:DelName(${2:cPropriedade})"
+            "${1:oJson}:delName(${2:cPropriedade})"
         ],
-        "description": "Remove a propriedade e seu valor de um JsonObject a partir do nome fornecido. oJson:DelName(<cPropriedade>)"
+        "description": "Remove a propriedade e seu valor de um JsonObject a partir do nome fornecido. oJson:delName(<cPropriedade>)"
     },
-    "JsonObject:FromJSON": {
-        "prefix": "JsonObject - Metodo FromJson",
+    "JsonObject:fromJSON": {
+        "prefix": "JsonObject - Metodo fromJSON",
         "body": [
-            "${1:oJson}:FromJSON(${2:cJson})"
+            "${1:oJson}:fromJSON(${2:cJson})"
         ],
-        "description": "Permite popular o JsonObject através das informações contidas em uma string no formato JSON. oJson:FromJSON(<cJson>)"
+        "description": "Permite popular o JsonObject através das informações contidas em uma string no formato JSON. oJson:fromJSON(<cJson>)"
     },
-    "JsonObject:GetJsonObject": {
-        "prefix": "JsonObject - Metodo GetJsonObject",
+    "JsonObject:getJsonObject": {
+        "prefix": "JsonObject - Metodo getJsonObject",
         "body": [
-            "${1:oJson}:GetJsonObject(${2:cPropriedade})"
+            "${1:oJson}:getJsonObject(${2:cPropriedade})"
         ],
-        "description": "Retorna um objeto do tipo JsonObject que seja o conteúdo da propriedade informada. oJson:GetJsonObject(<cPropriedade>)"
+        "description": "Retorna um objeto do tipo JsonObject que seja o conteúdo da propriedade informada. oJson:getJsonObject(<cPropriedade>)"
     },
-    "JsonObject:GetJsonText": {
-        "prefix": "JsonObject - Metodo GetJsonText",
+    "JsonObject:getJsonText": {
+        "prefix": "JsonObject - Metodo getJsonText",
         "body": [
-            "${1:oJson}:GetJsonText(${2:cChave})"
+            "${1:oJson}:getJsonText(${2:cChave})"
         ],
-        "description": "Retorna o valor de uma determinada chave passada no parametro, do objeto Json, em formato de string. oJson:GetJsonText(<cChave>)"
+        "description": "Retorna o valor de uma determinada chave passada no parametro, do objeto Json, em formato de string. oJson:getJsonText(<cChave>)"
     },
-    "JsonObject:GetJsonValue": {
-        "prefix": "JsonObject - Metodo GetJsonValue",
+    "JsonObject:getJsonValue": {
+        "prefix": "JsonObject - Metodo getJsonValue",
         "body": [
-            "${1:oJson}:GetJsonValue(${2:cPropriedade},${3:@xValor},/*@cType*/)"
+            "${1:oJson}:getJsonValue(${2:cPropriedade},${3:@xValor},/*@cType*/)"
         ],
-        "description": "Recupera o valor, e o tipo de uma determinada propriedade do objeto Json. oJson:GetJsonValue(<cPropriedade>,<@xValor>,[@cType])"
+        "description": "Recupera o valor, e o tipo de uma determinada propriedade do objeto Json. oJson:getJsonValue(<cPropriedade>,<@xValor>,[@cType])"
     },
-    "JsonObject:GetNames": {
-        "prefix": "JsonObject - Metodo GetNames",
+    "JsonObject:getNames": {
+        "prefix": "JsonObject - Metodo getNames",
         "body": [
-            "${1:oJson}:GetNames()"
+            "${1:oJson}:getNames()"
         ],
-        "description": "Retorna um array com todas as propriedades disponíveis no primeiro nível do JsonObject. oJson:GetNames()"
+        "description": "Retorna um array com todas as propriedades disponíveis no primeiro nível do JsonObject. oJson:getNames()"
     },
-    "JsonObject:HasProperty": {
-        "prefix": "JsonObject - Metodo HasProperty",
+    "JsonObject:hasProperty": {
+        "prefix": "JsonObject - Metodo hasProperty",
         "body": [
-            "${1:oJson}:HasProperty(${2:cChave})"
+            "${1:oJson}:hasProperty(${2:cChave})"
         ],
-        "description": "Verifica se o objeto json possui determinada chave cKey. Retorna verdadeiro se a chave existe, e falso caso contrário. oJson:HasProperty(<cChave>)"
+        "description": "Verifica se o objeto json possui determinada chave cKey. Retorna verdadeiro se a chave existe, e falso caso contrário. oJson:hasProperty(<cChave>)"
     },
-    "JsonObject:Set": {
-        "prefix": "JsonObject - Metodo Set",
+    "JsonObject:set": {
+        "prefix": "JsonObject - Metodo set",
         "body": [
-            "${1:oJson}:Set(${2:aJson})"
+            "${1:oJson}:set(${2:aJson})"
         ],
-        "description": "Coloca um Vetor ou um Objeto Json na raiz do JsonObject. oJson:Set(<aJson>)"
+        "description": "Coloca um Vetor ou um Objeto Json na raiz do JsonObject. oJson:set(<aJson>)"
     },
     "JsonObject:toJSON": {
         "prefix": "JsonObject - Metodo toJSON",
@@ -5392,12 +5366,12 @@
         "prefix": "TryCatch - TLPP",
         "body": [
             "TRY",
-            "${1:<intruções>}",
+            "${1:<INTRUÇÕES>}",
             "CATCH ${2:oError}",
-            "${3:<tratativas do erro em TRY>}",
+            "${3:<TRATATIVAS DO ERRO EM TRY>}",
             "/*THROW ${4:oError} - (Opcional)*/",
             "/*FINALLY - (Opcional)",
-            "${5:<tratativas antes de sair do TRYCATCH>}*/",
+            "${5:<TRATATIVAS ANTES DE SAIR DO TRYCATCH>}*/",
             "ENDTRY"
         ],
         "description": "Um bloco de código entre as expressões Try...Catch são testados e caso de um erro implícito no código (uma exceção), ou erro explicito declarado no programa, tem seu fluxo desviado para o bloco de tratamento de erro em catch."
@@ -5458,12 +5432,12 @@
         ],
         "description": "Retorna o valor de uma chave do Header do objeto Response da requisição. oRest:getKeyHeaderResponse(<cChave>,<cValor>)"
     },
-    "oRest:ExistKeyHeaderResponse": {
-        "prefix": "oRest - Metodo ExistKeyHeaderResponse",
+    "oRest:existKeyHeaderResponse": {
+        "prefix": "oRest - Metodo existKeyHeaderResponse",
         "body": [
-            "oRest:ExistKeyHeaderResponse(${1:cChave})"
+            "oRest:existKeyHeaderResponse(${1:cChave})"
         ],
-        "description": "Verifica se uma determinada chave, recebida por parâmetro, existe no header do objeto response. oRest:ExistKeyHeaderResponse(<cChave>)"
+        "description": "Verifica se uma determinada chave, recebida por parâmetro, existe no header do objeto response. oRest:existKeyHeaderResponse(<cChave>)"
     },
     "oRest:setHeaderResponse": {
         "prefix": "oRest - Metodo setHeaderResponse",
@@ -5974,13 +5948,13 @@
             "\tLocal oModel    := FWLoadModel('${MODELO_MVC}') //Carrega modelo MVC",
             "",
             "\t//Seta operação do modelo",
-            "\toModel:SetOperation(${MODEL_OPERATION_INSERT})",
+            "\toModel:setOperation(${MODEL_OPERATION_INSERT})",
             "",
             "\t//Seta o modelo para ativo",
-            "\toModel:Activate()",
+            "\toModel:activate()",
             "",
             "\t //Cabeçalho do modelo (Enchoice)",
-            "\toModel:SetValue( '${MASTER}', '${CAMPO}', ${VALOR})",
+            "\toModel:etValue( '${MASTER}', '${CAMPO}', ${VALOR})",
             "",
             "\t//Grid do modelo (se existir)",
             "\toModel:SetValue( '${DETAIL}', '${CAMPO}', ${VALOR})",

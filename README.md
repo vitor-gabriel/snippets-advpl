@@ -1,15 +1,11 @@
 # Snippets para ADVPL
 
-Esse repositorio tem como objetivo ser um auxilar ao desenvolvimento ADVPL. Ajudando os devs a ganhar tempo com as pesquisas por nome/parametros das funcoes e metodos que existem no ADVPL.
+Essa extensão tem como objetivo ser um auxilar ao desenvolvimento ADVPL. Ajudando os devs a ganhar tempo com as pesquisas por nome/parametros das funcoes e metodos que existem no ADVPL.
 
 ### Como usar?
 
-* Baixe o repositório
-* Pressione a tecla F1 de seu teclado
-* Pesquise por 'snippets'
-* Clique na opção 'Configurar snippets de usuario'
-* Pesquise a linguagem ADVPL (nescessario ter a extensao TDS-VsCode instalado)
-* Copie o conteudo do ADVPL.JSON deste repositorio para o aquivo que o que o VsCode abriu
+* Digite a função desejada ou pressione CRTL + ESPAÇO.
+* Pressione TAB para finalizar o autocompletar da ferramenta.
 
 Mais detalhes:
 [VsCode Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
