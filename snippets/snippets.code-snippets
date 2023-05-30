@@ -4325,9 +4325,9 @@
         ]
     },
     "_SetOwnerPrvt": {
-        "prefix": "_SetNamedPrvt",
+        "prefix": "_SetOwnerPrvt",
         "body": [
-            "_SetNamedPrvt('${1:cVar}',${2:xValue}"
+            "_SetOwnerPrvt('${1:cVar}',${2:xValue}"
         ],
         "description": "Cria uma variável private na função superior da pilha"
     },
