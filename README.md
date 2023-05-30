@@ -4,7 +4,7 @@ Essa extensão tem como objetivo ser um auxilar ao desenvolvimento ADVPL. Ajudan
 
 ### Como usar?
 
-* Digite a função desejada ou pressione CRTL + ESPAÇO.
+* Digite a função desejada ou pressione CTRL + ESPAÇO.
 * Pressione TAB para finalizar o autocompletar da ferramenta.
 
 Mais detalhes:

@@ -39,7 +39,7 @@ $RECYCLE.BIN/
 
 #Jsons workspaces
 *.json
-!advpl.json
+!package.json
 
 #DS_Store
 *.DS_Store

@@ -1,0 +1,39 @@
+{
+  "publisher": "vitor-leyarl",
+  "name": "snippets-for-advpl",
+  "displayName": "Snippets for ADVPL",
+  "description": "Snippets para uso na linguagem ADVPL/TLPP",
+  "version": "1.0.3",
+  "engines": {
+    "vscode": "^1.57.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "icon": "logo.png",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "advpl",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "tlpp",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "keywords": [
+    "advpl",
+    "tlpp",
+    "protheus",
+    "totvs"
+  ],
+  "repository": {
+    "url": "https://github.com/vitor-gabriel/snippets-advpl"
+  },
+  "homepage": "https://github.com/vitor-gabriel/snippets-advpl",
+  "bugs": {
+    "url": "https://github.com/vitor-gabriel/snippets-advpl/issues"
+  }
+}
