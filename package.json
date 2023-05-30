@@ -3,22 +3,22 @@
   "name": "snippets-for-advpl",
   "displayName": "Snippets for ADVPL",
   "description": "Snippets para uso na linguagem ADVPL/TLPP",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "engines": {
-    "vscode": "^1.57.0"
+    "vscode": "^1.51.0"
   },
   "categories": [
     "Snippets"
   ],
+  "extensionDependencies": [
+    "totvs.tds-vscode"
+  ],
   "icon": "logo.png",
+  "main": "./dist/extension",
   "contributes": {
     "snippets": [
       {
         "language": "advpl",
-        "path": "./snippets/snippets.code-snippets"
-      },
-      {
-        "language": "tlpp",
         "path": "./snippets/snippets.code-snippets"
       }
     ]
