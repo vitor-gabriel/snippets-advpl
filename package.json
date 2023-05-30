@@ -14,7 +14,6 @@
     "totvs.tds-vscode"
   ],
   "icon": "logo.png",
-  "main": "./dist/extension",
   "contributes": {
     "snippets": [
       {
