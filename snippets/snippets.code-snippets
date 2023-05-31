@@ -850,6 +850,20 @@
         ],
         "description": "GetClientIP-Retorna o número IP - Internet Protocol do servidor que o SmartClient está instalado. GetClientIP()"
     },
+    "GetCodePage": {
+        "prefix": "GetCodePage",
+        "body": [
+            "GetCodePage()"
+        ],
+        "description": "GetCodePage-Retorna o encode definido no .ini do Application Server. GetCodePage()"
+    },
+    "GetEndPoint": {
+        "prefix": "GetEndPoint",
+        "body": [
+            "GetEndPoint()"
+        ],
+        "description": "GetEndPoint-Retorna o nome do endpoint e porta conectada, seja IP ou hostname, utilizado para a conexão com o Appserver do ini do smartclient.. GetEndPoint()"
+    },
     "GetComputerName": {
         "prefix": "GetComputerName",
         "body": [
@@ -947,6 +961,13 @@
             "GetServerType()"
         ],
         "description": "GetServerType-Retorna um inteiro que representa o tipo de execução do Application Server. GetServerType()"
+    },
+    "GetSrvArch": {
+        "prefix": "GetSrvArch",
+        "body": [
+            "GetSrvArch()"
+        ],
+        "description": "GetSrvArch-Retorna a arquitetura do processador que está sendo executado o Application Server. Suporta os sistemas operacionais Windows e Linux. GetSrvArch()"
     },
     "GetSrvGlbInfo": {
         "prefix": "GetSrvGlbInfo",
@@ -1046,6 +1067,20 @@
         ],
         "description": "IsSrvUnix-Informa se o Application Server está rodando em ambiente Unix, Linux ou Microsoft Windows. IsSrvUnix()"
     },
+    "MetricsName": {
+        "prefix": "MetricsName",
+        "body": [
+            "MetricsName(${1:WithVersion})"
+        ],
+        "description": "MetricsName-Retorna um Objeto no formato Json com os nomes de todas as métricas disponíveis para coleta e a versão da api quando solicitado. MetricsName([WithVersion])"
+    },
+    "MetricsRead": {
+        "prefix": "MetricsRead",
+        "body": [
+            "MetricsRead(${1:Metric_Name})"
+        ],
+        "description": "MetricsRead-Retorna um Objeto no formato Json com os nomes de todas as métricas disponíveis para coleta e a versão da api quando solicitado. MetricsRead([Metric_Name])"
+    },
     "RemoteXVersion": {
         "prefix": "RemoteXVersion",
         "body": [
@@ -1066,6 +1101,20 @@
             "Set(${nParam},${1:/*xValue*/})"
         ],
         "description": "Set-Realiza a configuração de alguns parâmetros do sistema, permite também retornar o valor previamente configurado. Set(<nParam>,[xValue])"
+    },
+    "SetKSysLog": {
+        "prefix": "SetKSysLog",
+        "body": [
+            "SetKSysLog(${1:ckey},${2:cValor})"
+        ],
+        "description": "SetKSysLog-Adiciona um identificador no formato [chave valor] a todas mensagens enviadas ao syslog, através das funções Conout e LogMsg. SetKSysLog(<ckey>,<cValor>)"
+    },
+    "DelKSysLog": {
+        "prefix": "DelKSysLog",
+        "body": [
+            "DelKSysLog(${1:cKey})"
+        ],
+        "description": "CmpBuildStr-Remove um identificador previamente adicionado utilizando a função SetKSysLog. DelKSysLog(<ckey>)"
     },
     "ShowInfMem": {
         "prefix": "ShowInfMem",
@@ -1095,6 +1144,20 @@
         ],
         "description": "ThreadID-Retorna o ID (número de identificação) do thread no qual a chamada da função foi executada. ThreadID()"
     },
+    "UUIDRandom": {
+        "prefix": "UUIDRandom",
+        "body": [
+            "UUIDRandom()"
+        ],
+        "description": "UUIDRandom-Cria um identificador UUID (do inglês Universally Unique IDentifier) exclusivo. UUIDRandom()"
+    },
+    "UUIDRandomSeq": {
+        "prefix": "UUIDRandomSeq",
+        "body": [
+            "UUIDRandomSeq()"
+        ],
+        "description": "UUIDRandomSeq-Cria um identificador UUID (do inglês Universally Unique IDentifier) exclusivo sequencial. UUIDRandomSeq()"
+    },
     "__Quit": {
         "prefix": "__Quit",
         "body": [
@@ -1108,6 +1171,13 @@
             "__SetPicture(${1:/*cPictMode*/})"
         ],
         "description": "__SetPicture-Define o comportamento do número da imagem da aplicação no sistema, para operações de entrada de dados via comando no comando [ @ ... SAY/GET ... PICTURE ], bem como o comportamento na formatação de dados numéricos em string via função Advpl Transform(), quando usamos a função da imagem \"@E\", para formatar uma determinada string numérica usando o formato europeu ( onde a vírgula é usada como separador decimal e ponto(s) usado(s) como separador( s) de milhares). __SetPicture([cPictMode])"
+    },
+    "CmpBuildStr": {
+        "prefix": "CmpBuildStr",
+        "body": [
+            "CmpBuildStr(${1:cLeft},${2:cRight})"
+        ],
+        "description": "CmpBuildStr-Compara duas strings em formato nnn.nnn.nnn.nnn, considerando os quatro primeiros blocos numéricos. CmpBuildStr(<cLeft>,<cRight>)"
     },
     "AppBringToFront": {
         "prefix": "AppBringToFront",
@@ -3762,6 +3832,13 @@
         ],
         "description": "PtRunInSession-Executar um comando em uma determinada sessão. PtRunInSession(<cThread>,<cFunction>)"
     },
+    "SetCSS": {
+        "prefix": "SetCSS",
+        "body": [
+            "SetCSS(${1:cCSS}})"
+        ],
+        "description": "SetCSS-Define um CSS (Cascading Style Sheet) padrão que será utilizado na criação de componentes visuais, veja mais em: https://tdn.totvs.com/display/tec/SetCSS. SetKey(<cCSS>)"
+    },
     "SetKey": {
         "prefix": "SetKey",
         "body": [
@@ -5383,6 +5460,83 @@
         ],
         "description": "Responsável por retornar o body da requisição HTTP. oRest:getBodyRequest()"
     },
+    "oRest:getCentryPointAuthorizationOnAuth": {
+        "prefix": "oRest - Metodo getCentryPointAuthorizationOnAuth",
+        "body": [
+            "oRest:getCentryPointAuthorizationOnAuth()"
+        ],
+        "description": "Para a autenticação Basic, é possível determinar qual função irá fazer a verificação do usuário e senha enviados pela requisição. Esse método retorna o nome da função configurada. oRest:getCentryPointAuthorizationOnAuth()"
+    },
+    "oRest:getCentryPointAuthorizationScheme": {
+        "prefix": "oRest - Metodo getCentryPointAuthorizationScheme",
+        "body": [
+            "oRest:getCentryPointAuthorizationScheme()"
+        ],
+        "description": "Retorna valor da propriedade privada referente ao nome da função do Entry Point. oRest:getCentryPointAuthorizationScheme()"
+    },
+    "oRest:getCentryPointEnvironment": {
+        "prefix": "oRest - Metodo getCentryPointEnvironment",
+        "body": [
+            "oRest:getCentryPointEnvironment()"
+        ],
+        "description": "É possível configurar uma função de callback, para que o usuário realize o processamento que julgar necessário, a ser executada na criação de uma thread destinada ao REST. Esse método retorna o nome da função configurada. oRest:getCentryPointEnvironment()"
+    },
+    "oRest:getCentryPointError": {
+        "prefix": "oRest - Metodo getCentryPointError",
+        "body": [
+            "oRest:getCentryPointError()"
+        ],
+        "description": "É possível configurar uma função de callback, para que o usuário customize o tratamento de erros. Esse método retorna o nome da função configurada. oRest:getCentryPointError()"
+    },
+    "oRest:getCEntryPointExit": {
+        "prefix": "oRest - Metodo getCEntryPointExit",
+        "body": [
+            "oRest:getCEntryPointExit()"
+        ],
+        "description": "Quando ocorre a finalização de uma thread de atendimento REST, uma função de callback pode ser chamada para que o usuário realize o processamento que julgar necessário. Esse método retorna o nome da função configurada. oRest:getCEntryPointExit()"
+    },
+    "oRest:getCloseAfterSend": {
+        "prefix": "oRest - Metodo getCloseAfterSend",
+        "body": [
+            "oRest:getCloseAfterSend()"
+        ],
+        "description": "Responsável por retornar o valor de definição para o encerramento da sessão após a requisição. oRest:getCloseAfterSend()"
+    },
+    "oRest:getConnectionRequest": {
+        "prefix": "oRest - Metodo getConnectionRequest",
+        "body": [
+            "oRest:getConnectionRequest()"
+        ],
+        "description": "Responsável por retornar a conexão utilizada na requisição. oRest:getConnectionRequest()"
+    },
+    "oRest:getLentryPointAuthorization": {
+        "prefix": "oRest - Metodo getLentryPointAuthorization",
+        "body": [
+            "oRest:getLentryPointAuthorization()"
+        ],
+        "description": "Para a autenticação Basic, é possível determinar qual função irá fazer a verificação do usuário e senha enviados pela requisição. Esse método indica se essa configuração foi realizada ou não. oRest:getLentryPointAuthorization()"
+    },
+    "oRest:getLEntryPointExit": {
+        "prefix": "oRest - Metodo getLEntryPointExit",
+        "body": [
+            "oRest:getLEntryPointExit()"
+        ],
+        "description": "Quando ocorre a finalização de uma thread de atendimento REST, uma função de callback pode ser chamada para que o usuário realize o processamento que julgar necessário. Esse método informa se essa função foi ou não configurada. oRest:getLEntryPointExit()"
+    },
+    "oRest:getLEntryPointGrader": {
+        "prefix": "oRest - Metodo getLEntryPointGrader",
+        "body": [
+            "oRest:getLEntryPointGrader()"
+        ],
+        "description": "Retorna valor da propriedade privada referente se existe Entry Point. oRest:getLEntryPointGrader()"
+    },
+    "oRest:getMethodRequest": {
+        "prefix": "oRest - Metodo getMethodRequest",
+        "body": [
+            "oRest:getMethodRequest()"
+        ],
+        "description": "Retorna qual o método executado para acessar o endpoint. oRest:getMethodRequest()"
+    },
     "oRest:getHeaderRequest": {
         "prefix": "oRest - Metodo getHeaderRequest",
         "body": [
@@ -5397,12 +5551,47 @@
         ],
         "description": "Responsável por retornar os parâmetros informados na requisição via URI (path param). oRest:getPathParamsRequest()"
     },
+    "oRest:getPathRequest": {
+        "prefix": "oRest - Metodo getPathRequest",
+        "body": [
+            "oRest:getPathRequest()"
+        ],
+        "description": "Retorna o endereço do caminho da requisição. oRest:getPathRequest()"
+    },
+    "oRest:getProtocolRequest": {
+        "prefix": "oRest - Metodo getProtocolRequest",
+        "body": [
+            "oRest:getProtocolRequest()"
+        ],
+        "description": "Getter para o protocolo de comunicação utilizado na requisição. oRest:getProtocolRequest()"
+    },
     "oRest:getQueryRequest": {
         "prefix": "oRest - Metodo getQueryRequest",
         "body": [
             "oRest:getQueryRequest()"
         ],
         "description": "Responsável por retornar os parâmetros informados na requisição via URI (query param). oRest:getQueryRequest()"
+    },
+    "oRest:getRetCodResponse": {
+        "prefix": "oRest - Metodo getRetCodResponse",
+        "body": [
+            "oRest:getRetCodResponse()"
+        ],
+        "description": "Responsável por retornar o código de status do HTTP contido no objeto oRest. oRest:getRetCodResponse()"
+    },
+    "oRest:getRetMsgResponse": {
+        "prefix": "oRest - Metodo getRetMsgResponse",
+        "body": [
+            "oRest:getRetMsgResponse()"
+        ],
+        "description": "Responsável por retornar a mensagem do HTTP contido no objeto oRest. oRest:getRetMsgResponse()"
+    },
+    "oRest:getStatusResponse": {
+        "prefix": "oRest - Metodo getStatusResponse",
+        "body": [
+            "oRest:getStatusResponse()"
+        ],
+        "description": "Retorna o código de status do HTTP que será considerado no retorno da requisição até o momento da pesquisa. oRest:getStatusResponse()"
     },
     "oRest:setResponse": {
         "prefix": "oRest - Metodo setResponse",
@@ -5460,6 +5649,13 @@
         ],
         "description": "Permite que o usuário dê manutenção em um valor de determinada chave do cabeçalho de repsosta (Header Response). oRest:updateKeyHeaderResponse(<cChave>,<cValor>)"
     },
+    "oRest:existKeyHeaderRequest": {
+        "prefix": "oRest - Metodo existKeyHeaderRequest",
+        "body": [
+            "oRest:existKeyHeaderRequest(${1:cChave})"
+        ],
+        "description": "Responsável verificar se uma chave existe no header da requisição. oRest:updateKeyHeaderResponse(<cChave>,<cValor>)"
+    },
     "oRest:deleteKeyHeaderResponse": {
         "prefix": "oRest - Metodo deleteKeyHeaderResponse",
         "body": [
@@ -5487,6 +5683,48 @@
             "oRest:setFault(${1:cMensagem})"
         ],
         "description": "Responsável por customizar a mensagem de retorno padrão do servidor rest, ou seja, é possível determinar qual será a resposta final da requisição em relação a resposta original. oRest:setFault(<cMensagem>)"
+    },
+    "oRest:sendZipped": {
+        "prefix": "oRest - Metodo sendZipped",
+        "body": [
+            "oRest:sendZipped(${1:cChave})"
+        ],
+        "description": "Responsável definir que o conteúdo seria enviado compactado ('zipado'). oRest:setFault(<cChave>)"
+    },
+    "oRest:setChunkedResponse": {
+        "prefix": "oRest - Metodo setChunkedResponse",
+        "body": [
+            "oRest:setChunkedResponse(${1:cMensagem})"
+        ],
+        "description": "O Chunked é um termo utilizado em conjunto com o protocolo de transferência HTTP, também conhecido como Chunked Transfer Encoding, é um mecanismo para enviar dados em pedaços ou 'chunks', em vez de enviar tudo de uma só vez. Essa abordagem pode ser útil em cenários em que o tamanho total dos dados a serem transmitidos é desconhecido ou quando a transmissão de dados em uma única operação pode ser impraticável devido a restrições de recursos ou latência de rede. \n\nNo REST TLPP, se você deseja implementar o envio dos dados divididos em pequenos chunks (pedaços), você deve utilizar uma combinação de métodos disponíveis: \nDo primeiro até o penúltimo envio, deve utilizar a sintaxe: oRest:setChunkedResponse(cContent). \nNo último envio, deve utilizar a sintaxe: oRest:setLastChunkedResponse(cContent). oRest:setChunkedResponse(<cMensagem>)"
+    },
+    "oRest:setLastChunkedResponse": {
+        "prefix": "oRest - Metodo setLastChunkedResponse",
+        "body": [
+            "oRest:setLastChunkedResponse(${1:cMensagem})"
+        ],
+        "description": "Deve ser utilizado para informar que o ultimo chunk (pedaço) do corpo(body) da resposta da requisicao está sendo enviado setando no header a chave 'Content-Length: 0'. oRest:setLastChunkedResponse(<cMensagem>)"
+    },
+    "oRest:getUserExit": {
+        "prefix": "oRest - Metodo getUserExit",
+        "body": [
+            "oRest:getUserExit()"
+        ],
+        "description": "Getter para atributo que informa se houve a necessidade de sair forçadamente da thread. oRest:getUserExit()"
+    },
+    "oRest:getXhrRequest": {
+        "prefix": "oRest - Metodo getXhrRequest",
+        "body": [
+            "oRest:getXhrRequest()"
+        ],
+        "description": "Indica se requisição possui o objeto XHR(XML Http Request). oRest:getXhrRequest()"
+    },
+    "oRest:setUserExit": {
+        "prefix": "oRest - Metodo setUserExit",
+        "body": [
+            "oRest:setUserExit()"
+        ],
+        "description": "Setter para atributo utilizado no fluxo de processamento das requisições. Utilize-o se houver a necessidade de interromper o processamento de novas requisições. oRest:setUserExit()"
     },
     "FWAlertError": {
         "prefix": "FWAlertError",
