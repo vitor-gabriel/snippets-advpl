@@ -4458,15 +4458,27 @@
     "BeginSql": {
         "prefix": "BeginSql",
         "body": [
-            "\tBeginSql Alias ${tabela}",
-            "\t\tSELECT",
-            "\t\t\t${campos}",
-            "\t\tFROM ${alias}",
-            "\t\tWHERE D_E_L_E_T_ = ' '",
-            "\t\t${demaisCondicoes}",
-            "\t\tORDER BY ${orderBy}",
-            "\tEndSql"
-        ]
+		"Local ${Alias}\t:= GetNextAlias()",
+		"",
+		"BeginSQL alias ${Alias}",
+		"SELECT",
+		"\t${table}.*",
+		"FROM",
+		"\t%table:${table}% ${table}",
+		"WHERE",
+		"\t${prefixo}_FILIAL = %xFilial:${table}% AND",
+		"\t${table}.%notDel%",
+		"EndSql",
+		"",
+		"While (${Alias})->( !Eof() )",
+		"",
+		"\t(${Alias})->(DbSkip())",
+		"",
+		"Enddo",
+		"",
+		"(${Alias})->(DbCloseArea())",
+		""
+		]
     },
     "tReport1": {
         "prefix": "tReport 1 Sessão",
