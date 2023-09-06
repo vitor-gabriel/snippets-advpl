@@ -13,6 +13,19 @@
         ],
         "description": "Protheus doc"
     },
+    "Posicione": {
+		"prefix": "Posicione",
+		"body": [
+		"DbSelectArea(\"${tabela}\")",
+		"${tabela}->(DbSetOrder(${indice}))",
+		"If ${tabela}->(DbSeek(xFilial(\"${tabela}\")+${regra}))",
+		"\t$0",
+		"Else",
+		"\t",
+		"EndIf"
+		],
+		"description": "While"
+	},
     "While": {
         "prefix": "While",
         "body": [
