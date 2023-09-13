@@ -1,0 +1,72 @@
+{
+    "JsonObject:new": {
+        "prefix": "JsonObject - Construtor JavaScript Object Notation",
+        "body": [
+            "${1:oJson} := JsonObject():new()"
+        ],
+        "description": "A classe JsonObject representa um objeto JSON (JavaScript Object Notation). JsonObject():new()"
+    },
+    "JsonObject:delName": {
+        "prefix": "JsonObject - Metodo delName",
+        "body": [
+            "${1:oJson}:delName(${2:cPropriedade})"
+        ],
+        "description": "Remove a propriedade e seu valor de um JsonObject a partir do nome fornecido. oJson:delName(<cPropriedade>)"
+    },
+    "JsonObject:fromJSON": {
+        "prefix": "JsonObject - Metodo fromJSON",
+        "body": [
+            "${1:oJson}:fromJSON(${2:cJson})"
+        ],
+        "description": "Permite popular o JsonObject através das informações contidas em uma string no formato JSON. oJson:fromJSON(<cJson>)"
+    },
+    "JsonObject:getJsonObject": {
+        "prefix": "JsonObject - Metodo getJsonObject",
+        "body": [
+            "${1:oJson}:getJsonObject(${2:cPropriedade})"
+        ],
+        "description": "Retorna um objeto do tipo JsonObject que seja o conteúdo da propriedade informada. oJson:getJsonObject(<cPropriedade>)"
+    },
+    "JsonObject:getJsonText": {
+        "prefix": "JsonObject - Metodo getJsonText",
+        "body": [
+            "${1:oJson}:getJsonText(${2:cChave})"
+        ],
+        "description": "Retorna o valor de uma determinada chave passada no parametro, do objeto Json, em formato de string. oJson:getJsonText(<cChave>)"
+    },
+    "JsonObject:getJsonValue": {
+        "prefix": "JsonObject - Metodo getJsonValue",
+        "body": [
+            "${1:oJson}:getJsonValue(${2:cPropriedade},${3:@xValor},/*@cType*/)"
+        ],
+        "description": "Recupera o valor, e o tipo de uma determinada propriedade do objeto Json. oJson:getJsonValue(<cPropriedade>,<@xValor>,[@cType])"
+    },
+    "JsonObject:getNames": {
+        "prefix": "JsonObject - Metodo getNames",
+        "body": [
+            "${1:oJson}:getNames()"
+        ],
+        "description": "Retorna um array com todas as propriedades disponíveis no primeiro nível do JsonObject. oJson:getNames()"
+    },
+    "JsonObject:hasProperty": {
+        "prefix": "JsonObject - Metodo hasProperty",
+        "body": [
+            "${1:oJson}:hasProperty(${2:cChave})"
+        ],
+        "description": "Verifica se o objeto json possui determinada chave cKey. Retorna verdadeiro se a chave existe, e falso caso contrário. oJson:hasProperty(<cChave>)"
+    },
+    "JsonObject:set": {
+        "prefix": "JsonObject - Metodo set",
+        "body": [
+            "${1:oJson}:set(${2:aJson})"
+        ],
+        "description": "Coloca um Vetor ou um Objeto Json na raiz do JsonObject. oJson:set(<aJson>)"
+    },
+    "JsonObject:toJSON": {
+        "prefix": "JsonObject - Metodo toJSON",
+        "body": [
+            "${1:oJson}:toJSON()"
+        ],
+        "description": "Permite exportar o objeto JSON para uma string em formato JSON. oJson:toJSON()"
+    }
+}

@@ -1,0 +1,15 @@
+{"Protheus doc": {
+        "prefix": ["pdoc","add"],
+        "body": [
+            "//-------------------------------------------------------------------",
+            "${BLOCK_COMMENT_START}{Protheus.doc} ${TM_FILENAME_BASE}",
+            "${2:description}",
+            "@author  ${3:author}",
+            "@since   ${4:date}",
+            "@version ${5:version}",
+            "${BLOCK_COMMENT_END}",
+            "//-------------------------------------------------------------------"
+        ],
+        "description": "Protheus doc"
+    },
+}

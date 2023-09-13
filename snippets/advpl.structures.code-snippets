@@ -1,0 +1,233 @@
+{
+    "If": {
+        "prefix": "If",
+        "body": [
+            "\tIf ${1:condicao1}",
+            "\tElseIf ${2:condicao2}",
+            "\tElse",
+            "\tEndIf"
+        ],
+        "description": "If Statement"
+    },
+    "Case": {
+        "prefix": "Case ADVPL",
+        "body": [
+            "\tDo Case",
+            "\t\tCase ${1:condicao1}",
+            "\t\tCase ${2:condicao2}",
+            "\t\tCase ${3:condicao3}",
+            "\t\tCase ${3:condicao4}",
+            "\t\tOtherWise",
+            "\tEndCase"
+        ],
+        "description": "Case Statement"
+    },
+    "For": {
+        "prefix": "For ADVPL",
+        "body": [
+            "\tFor ${1:var} := 1 to Len(${2:array}) ",
+            "\t\t${3:processamento}",
+            "\tNext"
+        ],
+        "description": "For Statement"
+    },
+    "While": {
+        "prefix": "While",
+        "body": [
+            "While (${1:lCond})",
+            "\t${2:processamento}",
+            "End"
+        ],
+        "description": "While Statement"
+    },
+    "WhileTRB": {
+        "prefix": [
+            "While",
+            "While Alias"
+        ],
+        "body": [
+            "\tWhile ${1:ALIAS}->(!Eof())",
+            "\t\t${2:processamento}",
+            "\t\t${1:ALIAS}->(DbSkip())",
+            "\tEndDo"
+        ],
+        "description": "While em Tabela ADVPL"
+    },
+    "WhileJSON": {
+        "prefix": [
+            "While",
+            "While JSON"
+        ],
+        "body": [
+            "\t${aJson} := {}",
+            "\tWhile (${1:cAlias})->(!Eof())",
+            "\t\tAadd(${2:aJson},JsonObject():New())",
+            "\t\t${2:aJson}[Len(${2:aJson})] := (${1:cAlias})->${3:CampoTRB}",
+            "\t\t(${1:cAlias})->(DbSkip())",
+            "\tEndDo"
+        ],
+        "description": "While em JSON"
+    },
+    "Query": {
+        "prefix": [
+            "Query",
+            "dbUseArea",
+            "TCGenQry"
+        ],
+        "body": [
+            "Local ${1:cQuery} := ''",
+            "\t${1:cQuery} := 'query'",
+            "\t${1:cQuery} := ChangeQuery(${1:cQuery})",
+            "dbUseArea(.T., 'TOPCONN', TCGenQry(, , ${1:cQuery}), ${2:ALIAS}, .F., .T.)",
+            "While ${2:ALIAS}->(!Eof())",
+            "\t$2",
+            "\t${2:ALIAS}->(DbSkip())",
+            "EndDo",
+            "${2:ALIAS}->(DbCloseArea())"
+        ],
+        "description": "Cria a função de Query ja efetuando a conexão com o TOP e efetuando o While"
+    },
+    "BeginSql": {
+        "prefix": "BeginSql",
+        "body": [
+            "\tBeginSql Alias ${tabela}",
+            "\t\tSELECT",
+            "\t\t\t${campos}",
+            "\t\tFROM ${alias}",
+            "\t\tWHERE D_E_L_E_T_ = ' '",
+            "\t\t${demaisCondicoes}",
+            "\t\tORDER BY ${orderBy}",
+            "\tEndSql"
+        ],
+        "description": "Cria a a estrutura do BeginSql para consulta em banco de dados"
+    },
+    "MsExecAuto": {
+        "prefix": "MsExecAuto",
+        "body": [
+            "#INCLUDE 'TOTVS.CH'",
+            "",
+            "/*/{Protheus.doc} ${TM_FILENAME_BASE}",
+            "\tMsExecAuto",
+            "",
+            "\t@author  ${Nome}",
+            "\t@example ${Exemplos}",
+            "\t@param   [${Nome_do_Parametro}],${Tipo_do_Parametro},${Descricao_do_Parametro}",
+            "\t@return  ${Especifica_o_retorno}",
+            "\t@table   ${Tabelas}",
+            "\t@since   ${CURRENT_DATE}-${CURRENT_MONTH}-${CURRENT_YEAR}",
+            "\t@see     https://tdn.totvs.com/pages/releaseview.action?pageId=566489232",
+            "\t@see     https://centraldeatendimento.totvs.com/hc/pt-br/articles/360021296551-Cross-Segmento-Backoffice-Linha-Protheus-ADVPL-LINPOS-e-AUTODELETA-",
+            "/*/",
+            "",
+            "User Function ${TM_FILENAME_BASE}()",
+            "\tLocal aArea   := FWGetArea()",
+            "\tLocal aCabec  := {}",
+            "\tLocal aLinha  := {}",
+            "\tLocal aItens  := {}",
+            "\tLocal nOpc    := ${nOperacao}",
+            "\t//Controle de erro da rotina automatica",
+            "\tPrivate lMsErroAuto := .F.",
+            "",
+            "\t//Array com os dados da Enchoice",
+            "\taAdd(aCabec, {${campo_tbl_destino}, ${valor_campo}, Nil})",
+            "",
+            "\t//Array com os dados da Grid (se existir)",
+            "\taAdd(aLinha, {${campo_tbl_destino}, ${valor_campo}, Nil})",
+            "\taAdd(aItens, aLinha)",
+            "",
+            "\t//Executa a rotina automatica",
+            "\tMsExecAuto({|X,Y,Z| ${ROTINA}(X,Y,Z)}, aCabec, /*FWVetByDic(aItens,${cTabela},${lGrid})*/, nOpc)",
+            "",
+            "\t//Se tiver erro, retorno ele para o usuário (fazer devidadas tratativas se rodar em JOB)",
+            "\tIf lMsErroAuto",
+            "\t\tMostraErro()",
+            "\t\tlMsErroAuto := .F.",
+            "\tElse",
+            "\t\t//Se não tiver erro, retorno o resultado da rotina automatica",
+            "\t\tFwAlertSucess(\"${ROTINA} executada com sucesso!\")",
+            "\tEndIf",
+            "",
+            "\tFWRestArea(aArea)",
+            "Return"
+        ],
+        "description": "Monta um execauto para rotinas automaticas."
+    },
+    "MVCExecAuto": {
+        "prefix": "MVCExecAuto",
+        "body": [
+            "#INCLUDE 'TOTVS.CH'",
+            "#INCLUDE 'FWMVCDEF.CH'",
+            "",
+            "/*/{Protheus.doc} ${TM_FILENAME_BASE}",
+            "\tMVCExecAuto",
+            "",
+            "\t@author  ${Nome}",
+            "\t@example ${Exemplos}",
+            "\t@param   [${Nome_do_Parametro}],${Tipo_do_Parametro},${Descricao_do_Parametro}",
+            "\t@return  ${Especifica_o_retorno}",
+            "\t@table   ${Tabelas}",
+            "\t@since   ${CURRENT_DATE}-${CURRENT_MONTH}-${CURRENT_YEAR}",
+            "\t@see     https://tdn.totvs.com/display/public/PROT/Exemplos+execAuto+CNTA300",
+            "/*/",
+            "",
+            "User Function ${TM_FILENAME_BASE}()",
+            "\tLocal aArea     := FWGetArea()",
+            "\tLocal lContinua := .F.",
+            "\tLocal aErro     := {}",
+            "\tLocal oModel    := FWLoadModel('${MODELO_MVC}') //Carrega modelo MVC",
+            "",
+            "\t//Seta operação do modelo",
+            "\toModel:setOperation(${MODEL_OPERATION_INSERT})",
+            "",
+            "\t//Seta o modelo para ativo",
+            "\toModel:activate()",
+            "",
+            "\t //Cabeçalho do modelo (Enchoice)",
+            "\toModel:etValue( '${MASTER}', '${CAMPO}', ${VALOR})",
+            "",
+            "\t//Grid do modelo (se existir)",
+            "\toModel:SetValue( '${DETAIL}', '${CAMPO}', ${VALOR})",
+            "",
+            "\t//Fazer devidadas tratativas se rodar em JOB",
+            "\t//Se conseguir validar as informações",
+            "\tIf oModel:VldData()",
+            "",
+            "\t\t//Tenta realizar o Commit",
+            "\t\tIf oModel:Commit()",
+            "\t\t\tlContinua := .T.",
+            "\t\t//Se não deu certo, altera a variável para false",
+            "\t\tElse",
+            "\t\t\tlContinua := .F.",
+            "\t\tEndIf",
+            "\tElse",
+            "\t\t//Se não conseguir validar as informações, altera a variável para false",
+            "\t\tlContinua := .F.",
+            "\tEndIf",
+            "",
+            "\t//Se não deu certo a inclusão, mostra a mensagem de erro",
+            "\tIf !lContinua",
+            "\t\t//Busca o Erro do Modelo de Dados",
+            "\t\taErro := oModel:GetErrorMessage()",
+            "\t\t//Monta o Texto que será mostrado na tela",
+            "\t\tAutoGrLog('Id do formulário de origem: '  + ' [' + AllToChar(aErro[01]) + ']')",
+            "\t\tAutoGrLog('Id do campo de origem: '       + ' [' + AllToChar(aErro[02]) + ']')",
+            "\t\tAutoGrLog('Id do formulário de erro: '    + ' [' + AllToChar(aErro[03]) + ']')",
+            "\t\tAutoGrLog('Id do campo de erro: '         + ' [' + AllToChar(aErro[04]) + ']')",
+            "\t\tAutoGrLog('Id do erro: '                  + ' [' + AllToChar(aErro[05]) + ']')",
+            "\t\tAutoGrLog('Mensagem do erro: '            + ' [' + AllToChar(aErro[06]) + ']')",
+            "\t\tAutoGrLog('Mensagem da solução: '         + ' [' + AllToChar(aErro[07]) + ']')",
+            "\t\tAutoGrLog('Valor atribuído: '             + ' [' + AllToChar(aErro[08]) + ']')",
+            "\t\tAutoGrLog('Valor anterior: '              + ' [' + AllToChar(aErro[09]) + ']')",
+            "\t\t//Mostra a mensagem de Erro",
+            "\t\tMostraErro()",
+            "\tEndIf",
+            "",
+            "\t//Desativa o modelo de dados",
+            "\toModel:DeActivate()",
+            "",
+            "\tFWRestArea(aArea)",
+            "Return"
+        ],
+        "description": "Monta um execauto para rotinas automaticas."
+    }
+}

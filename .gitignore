@@ -64,3 +64,6 @@ Backup of *.doc*
 
 # Visio autosave temporary files
 *.~vsd*
+
+#Build Extension
+/Build

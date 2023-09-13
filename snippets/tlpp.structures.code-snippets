@@ -1,0 +1,16 @@
+{
+    "TryCatch": {
+        "prefix": "TryCatch - TLPP",
+        "body": [
+            "TRY",
+            "${1:<INTRUÇÕES>}",
+            "CATCH ${2:oError}",
+            "${3:<TRATATIVAS DO ERRO EM TRY>}",
+            "/*THROW ${4:oError} - (Opcional)*/",
+            "/*FINALLY - (Opcional)",
+            "${5:<TRATATIVAS ANTES DE SAIR DO TRYCATCH>}*/",
+            "ENDTRY"
+        ],
+        "description": "Um bloco de código entre as expressões Try...Catch são testados e caso de um erro implícito no código (uma exceção), ou erro explicito declarado no programa, tem seu fluxo desviado para o bloco de tratamento de erro em catch."
+    }
+}

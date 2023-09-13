@@ -3,7 +3,7 @@
   "name": "snippets-for-advpl",
   "displayName": "Snippets for ADVPL",
   "description": "Snippets para uso na linguagem ADVPL/TLPP",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "engines": {
     "vscode": "^1.51.0"
   },
@@ -18,7 +18,43 @@
     "snippets": [
       {
         "language": "advpl",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/advpl.commits.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/advpl.functions.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/advpl.json.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/advpl.mvc.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/advpl.structures.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/advpl.treport.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/advpl.webservice-rest.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/tlpp.functions.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/tlpp.rest.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/tlpp.structures.code-snippets"
       }
     ]
   },

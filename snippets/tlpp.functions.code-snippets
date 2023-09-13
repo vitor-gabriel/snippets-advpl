@@ -1,0 +1,9 @@
+{
+    "NameSpace": {
+        "prefix": "NameSpace",
+        "body": [
+            "namespace custom.${1:Modulo}.${2:Função}"
+        ],
+        "description": "Um namespace serve para fornecer uma maneira de manter um conjunto de nomes separado de outro."
+    }
+}

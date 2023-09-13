@@ -1,0 +1,275 @@
+{
+    "oRest:getBodyRequest": {
+        "prefix": "oRest - Metodo getBodyRequest",
+        "body": [
+            "oRest:getBodyRequest()"
+        ],
+        "description": "Responsável por retornar o body da requisição HTTP. oRest:getBodyRequest()"
+    },
+    "oRest:getCentryPointAuthorizationOnAuth": {
+        "prefix": "oRest - Metodo getCentryPointAuthorizationOnAuth",
+        "body": [
+            "oRest:getCentryPointAuthorizationOnAuth()"
+        ],
+        "description": "Para a autenticação Basic, é possível determinar qual função irá fazer a verificação do usuário e senha enviados pela requisição. Esse método retorna o nome da função configurada. oRest:getCentryPointAuthorizationOnAuth()"
+    },
+    "oRest:getCentryPointAuthorizationScheme": {
+        "prefix": "oRest - Metodo getCentryPointAuthorizationScheme",
+        "body": [
+            "oRest:getCentryPointAuthorizationScheme()"
+        ],
+        "description": "Retorna valor da propriedade privada referente ao nome da função do Entry Point. oRest:getCentryPointAuthorizationScheme()"
+    },
+    "oRest:getCentryPointEnvironment": {
+        "prefix": "oRest - Metodo getCentryPointEnvironment",
+        "body": [
+            "oRest:getCentryPointEnvironment()"
+        ],
+        "description": "É possível configurar uma função de callback, para que o usuário realize o processamento que julgar necessário, a ser executada na criação de uma thread destinada ao REST. Esse método retorna o nome da função configurada. oRest:getCentryPointEnvironment()"
+    },
+    "oRest:getCentryPointError": {
+        "prefix": "oRest - Metodo getCentryPointError",
+        "body": [
+            "oRest:getCentryPointError()"
+        ],
+        "description": "É possível configurar uma função de callback, para que o usuário customize o tratamento de erros. Esse método retorna o nome da função configurada. oRest:getCentryPointError()"
+    },
+    "oRest:getCEntryPointExit": {
+        "prefix": "oRest - Metodo getCEntryPointExit",
+        "body": [
+            "oRest:getCEntryPointExit()"
+        ],
+        "description": "Quando ocorre a finalização de uma thread de atendimento REST, uma função de callback pode ser chamada para que o usuário realize o processamento que julgar necessário. Esse método retorna o nome da função configurada. oRest:getCEntryPointExit()"
+    },
+    "oRest:getCloseAfterSend": {
+        "prefix": "oRest - Metodo getCloseAfterSend",
+        "body": [
+            "oRest:getCloseAfterSend()"
+        ],
+        "description": "Responsável por retornar o valor de definição para o encerramento da sessão após a requisição. oRest:getCloseAfterSend()"
+    },
+    "oRest:getConnectionRequest": {
+        "prefix": "oRest - Metodo getConnectionRequest",
+        "body": [
+            "oRest:getConnectionRequest()"
+        ],
+        "description": "Responsável por retornar a conexão utilizada na requisição. oRest:getConnectionRequest()"
+    },
+    "oRest:getLentryPointAuthorization": {
+        "prefix": "oRest - Metodo getLentryPointAuthorization",
+        "body": [
+            "oRest:getLentryPointAuthorization()"
+        ],
+        "description": "Para a autenticação Basic, é possível determinar qual função irá fazer a verificação do usuário e senha enviados pela requisição. Esse método indica se essa configuração foi realizada ou não. oRest:getLentryPointAuthorization()"
+    },
+    "oRest:getLEntryPointExit": {
+        "prefix": "oRest - Metodo getLEntryPointExit",
+        "body": [
+            "oRest:getLEntryPointExit()"
+        ],
+        "description": "Quando ocorre a finalização de uma thread de atendimento REST, uma função de callback pode ser chamada para que o usuário realize o processamento que julgar necessário. Esse método informa se essa função foi ou não configurada. oRest:getLEntryPointExit()"
+    },
+    "oRest:getLEntryPointGrader": {
+        "prefix": "oRest - Metodo getLEntryPointGrader",
+        "body": [
+            "oRest:getLEntryPointGrader()"
+        ],
+        "description": "Retorna valor da propriedade privada referente se existe Entry Point. oRest:getLEntryPointGrader()"
+    },
+    "oRest:getMethodRequest": {
+        "prefix": "oRest - Metodo getMethodRequest",
+        "body": [
+            "oRest:getMethodRequest()"
+        ],
+        "description": "Retorna qual o método executado para acessar o endpoint. oRest:getMethodRequest()"
+    },
+    "oRest:getHeaderRequest": {
+        "prefix": "oRest - Metodo getHeaderRequest",
+        "body": [
+            "oRest:getHeaderRequest()"
+        ],
+        "description": "Responsável por retornar o header da requisição. oRest:getHeaderRequest()"
+    },
+    "oRest:getPathParamsRequest": {
+        "prefix": "oRest - Metodo getPathParamsRequest",
+        "body": [
+            "oRest:getPathParamsRequest()"
+        ],
+        "description": "Responsável por retornar os parâmetros informados na requisição via URI (path param). oRest:getPathParamsRequest()"
+    },
+    "oRest:getPathRequest": {
+        "prefix": "oRest - Metodo getPathRequest",
+        "body": [
+            "oRest:getPathRequest()"
+        ],
+        "description": "Retorna o endereço do caminho da requisição. oRest:getPathRequest()"
+    },
+    "oRest:getProtocolRequest": {
+        "prefix": "oRest - Metodo getProtocolRequest",
+        "body": [
+            "oRest:getProtocolRequest()"
+        ],
+        "description": "Getter para o protocolo de comunicação utilizado na requisição. oRest:getProtocolRequest()"
+    },
+    "oRest:getQueryRequest": {
+        "prefix": "oRest - Metodo getQueryRequest",
+        "body": [
+            "oRest:getQueryRequest()"
+        ],
+        "description": "Responsável por retornar os parâmetros informados na requisição via URI (query param). oRest:getQueryRequest()"
+    },
+    "oRest:getRetCodResponse": {
+        "prefix": "oRest - Metodo getRetCodResponse",
+        "body": [
+            "oRest:getRetCodResponse()"
+        ],
+        "description": "Responsável por retornar o código de status do HTTP contido no objeto oRest. oRest:getRetCodResponse()"
+    },
+    "oRest:getRetMsgResponse": {
+        "prefix": "oRest - Metodo getRetMsgResponse",
+        "body": [
+            "oRest:getRetMsgResponse()"
+        ],
+        "description": "Responsável por retornar a mensagem do HTTP contido no objeto oRest. oRest:getRetMsgResponse()"
+    },
+    "oRest:getStatusResponse": {
+        "prefix": "oRest - Metodo getStatusResponse",
+        "body": [
+            "oRest:getStatusResponse()"
+        ],
+        "description": "Retorna o código de status do HTTP que será considerado no retorno da requisição até o momento da pesquisa. oRest:getStatusResponse()"
+    },
+    "oRest:setResponse": {
+        "prefix": "oRest - Metodo setResponse",
+        "body": [
+            "oRest:setResponse(${1:cJson})"
+        ],
+        "description": "Responsável por inserir o conteúdo do corpo da mensagem na resposta da requisição HTTP. É possível executar mais de uma vez esse método, mas é importante saber que, a cada execução o conteúdo recebido no parâmetro será concatenado. oRest:setResponse(<cJson>)"
+    },
+    "oRest:setKeyHeaderResponse": {
+        "prefix": "oRest - Metodo setKeyHeaderResponse",
+        "body": [
+            "oRest:setKeyHeaderResponse(${1:cChave},${2:cValor})"
+        ],
+        "description": "Define o valor de uma chave do cabeçalho de resposta. oRest:setKeyHeaderResponse(<cChave>,<cValor>)"
+    },
+    "oRest:getHeaderResponse": {
+        "prefix": "oRest - Metodo getHeaderResponse",
+        "body": [
+            "oRest:getHeaderResponse()"
+        ],
+        "description": "Retorna o Header Response da requisição. oRest:getHeaderResponse()"
+    },
+    "oRest:getKeyHeaderResponse": {
+        "prefix": "oRest - Metodo getKeyHeaderResponse",
+        "body": [
+            "oRest:getKeyHeaderResponse(${1:cChave},${2:cValor})"
+        ],
+        "description": "Retorna o valor de uma chave do Header do objeto Response da requisição. oRest:getKeyHeaderResponse(<cChave>,<cValor>)"
+    },
+    "oRest:existKeyHeaderResponse": {
+        "prefix": "oRest - Metodo existKeyHeaderResponse",
+        "body": [
+            "oRest:existKeyHeaderResponse(${1:cChave})"
+        ],
+        "description": "Verifica se uma determinada chave, recebida por parâmetro, existe no header do objeto response. oRest:existKeyHeaderResponse(<cChave>)"
+    },
+    "oRest:setHeaderResponse": {
+        "prefix": "oRest - Metodo setHeaderResponse",
+        "body": [
+            "oRest:setHeaderResponse(${1:jValor})"
+        ],
+        "description": "Responsável por definir o cabeçalho de resposta. É um cabeçalho HTTP utilizado para fornecer um contexto mais detalhado da resposta. oRest:setHeaderResponse(<jValor>)"
+    },
+    "oRest:appendKeyHeaderResponse": {
+        "prefix": "oRest - Metodo appendKeyHeaderResponse",
+        "body": [
+            "oRest:appendKeyHeaderResponse(${1:cChave},${2:cValor})"
+        ],
+        "description": "Adiciona um novo valor a uma chave do cabeçalho de resposta HeaderResponse. Observe que o valor antigo da chave não é eliminado, o novo valor é concatenado a ele. oRest:appendKeyHeaderResponse(<cChave>,<cValor>)"
+    },
+    "oRest:updateKeyHeaderResponse": {
+        "prefix": "oRest - Metodo updateKeyHeaderResponse",
+        "body": [
+            "oRest:updateKeyHeaderResponse(${1:cChave},${2:cValor})"
+        ],
+        "description": "Permite que o usuário dê manutenção em um valor de determinada chave do cabeçalho de repsosta (Header Response). oRest:updateKeyHeaderResponse(<cChave>,<cValor>)"
+    },
+    "oRest:existKeyHeaderRequest": {
+        "prefix": "oRest - Metodo existKeyHeaderRequest",
+        "body": [
+            "oRest:existKeyHeaderRequest(${1:cChave})"
+        ],
+        "description": "Responsável verificar se uma chave existe no header da requisição. oRest:updateKeyHeaderResponse(<cChave>,<cValor>)"
+    },
+    "oRest:deleteKeyHeaderResponse": {
+        "prefix": "oRest - Metodo deleteKeyHeaderResponse",
+        "body": [
+            "oRest:deleteKeyHeaderResponse(${1:cChave})"
+        ],
+        "description": "Elimina uma chave do cabeçalho de resposta Header. Observe a RCF sobre 'Response Header Fields' e veja que alguns campos não podem ser eliminados. oRest:deleteKeyHeaderResponse(<cChave>)"
+    },
+    "oRest:setStatusCode": {
+        "prefix": "oRest - Metodo setStatusCode",
+        "body": [
+            "oRest:setStatusCode(${1:nCodigo})"
+        ],
+        "description": "Responsável por customizar o código de retorno padrão do servidor rest, ou seja, é possível determinar qual será o status da resposta final da requisição em relação a resposta original. oRest:setStatusCode(<nCodigo>)"
+    },
+    "oRest:resetStatusCode": {
+        "prefix": "oRest - Metodo resetStatusCode",
+        "body": [
+            "oRest:resetStatusCode()"
+        ],
+        "description": "Responsável por restaurar os valores padrões para o Status Code (do servidor e do usuário), independente do momento em que seja utilizado. oRest:resetStatusCode()"
+    },
+    "oRest:setFault": {
+        "prefix": "oRest - Metodo setFault",
+        "body": [
+            "oRest:setFault(${1:cMensagem})"
+        ],
+        "description": "Responsável por customizar a mensagem de retorno padrão do servidor rest, ou seja, é possível determinar qual será a resposta final da requisição em relação a resposta original. oRest:setFault(<cMensagem>)"
+    },
+    "oRest:sendZipped": {
+        "prefix": "oRest - Metodo sendZipped",
+        "body": [
+            "oRest:sendZipped(${1:cChave})"
+        ],
+        "description": "Responsável definir que o conteúdo seria enviado compactado ('zipado'). oRest:setFault(<cChave>)"
+    },
+    "oRest:setChunkedResponse": {
+        "prefix": "oRest - Metodo setChunkedResponse",
+        "body": [
+            "oRest:setChunkedResponse(${1:cMensagem})"
+        ],
+        "description": "O Chunked é um termo utilizado em conjunto com o protocolo de transferência HTTP, também conhecido como Chunked Transfer Encoding, é um mecanismo para enviar dados em pedaços ou 'chunks', em vez de enviar tudo de uma só vez. Essa abordagem pode ser útil em cenários em que o tamanho total dos dados a serem transmitidos é desconhecido ou quando a transmissão de dados em uma única operação pode ser impraticável devido a restrições de recursos ou latência de rede. \n\nNo REST TLPP, se você deseja implementar o envio dos dados divididos em pequenos chunks (pedaços), você deve utilizar uma combinação de métodos disponíveis: \nDo primeiro até o penúltimo envio, deve utilizar a sintaxe: oRest:setChunkedResponse(cContent). \nNo último envio, deve utilizar a sintaxe: oRest:setLastChunkedResponse(cContent). oRest:setChunkedResponse(<cMensagem>)"
+    },
+    "oRest:setLastChunkedResponse": {
+        "prefix": "oRest - Metodo setLastChunkedResponse",
+        "body": [
+            "oRest:setLastChunkedResponse(${1:cMensagem})"
+        ],
+        "description": "Deve ser utilizado para informar que o ultimo chunk (pedaço) do corpo(body) da resposta da requisicao está sendo enviado setando no header a chave 'Content-Length: 0'. oRest:setLastChunkedResponse(<cMensagem>)"
+    },
+    "oRest:getUserExit": {
+        "prefix": "oRest - Metodo getUserExit",
+        "body": [
+            "oRest:getUserExit()"
+        ],
+        "description": "Getter para atributo que informa se houve a necessidade de sair forçadamente da thread. oRest:getUserExit()"
+    },
+    "oRest:getXhrRequest": {
+        "prefix": "oRest - Metodo getXhrRequest",
+        "body": [
+            "oRest:getXhrRequest()"
+        ],
+        "description": "Indica se requisição possui o objeto XHR(XML Http Request). oRest:getXhrRequest()"
+    },
+    "oRest:setUserExit": {
+        "prefix": "oRest - Metodo setUserExit",
+        "body": [
+            "oRest:setUserExit()"
+        ],
+        "description": "Setter para atributo utilizado no fluxo de processamento das requisições. Utilize-o se houver a necessidade de interromper o processamento de novas requisições. oRest:setUserExit()"
+    }
+}
