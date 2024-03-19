@@ -12,11 +12,20 @@ Mais detalhes:
 
 ### Como contribuir
 
-* Faça um fork do projeto
-* Adicione suas alterações no arquivo JSON
-* Faça um pull request
+* Faça um fork do projeto.
+* Adicione suas alterações no arquivo JSON.
+* Faça um pull request.
 
-###### Creditos
+###Changelog:
+
+* 1.0.0 - Versão inicial.
+* 1.1.6 - Versão restruturada em varios arquivos.
+* 2.1.6 - Versão BETA, adicionando a estrutura da função/método na descrição, além de adicionar o link da documentação oficial do TDN.
+
+<img src="https://raw.githubusercontent.com/vitor-gabriel/snippets-advpl/main/src/images/documentacao.png" tittle="imagem">
+
+
+#### Creditos
 
 Alguns snippets foram extraidos destas extensões:
 
