@@ -3,7 +3,7 @@
   "name": "snippets-for-advpl",
   "displayName": "Snippets for ADVPL",
   "description": "Snippets para uso na linguagem ADVPL/TLPP",
-  "version": "1.1.6",
+  "version": "2.1.6",
   "engines": {
     "vscode": "^1.51.0"
   },
@@ -16,6 +16,10 @@
   "icon": "logo.png",
   "contributes": {
     "snippets": [
+      {
+        "language": "advpl",
+        "path": "./snippets/environment/advpl-generic-functions.code-snippets"
+      },
       {
         "language": "advpl",
         "path": "./snippets/advpl.commits.code-snippets"

@@ -1,15 +1,27 @@
-{"Protheus doc": {
-        "prefix": ["pdoc","add"],
+{
+    "Protheus doc": {
+        "prefix": ["pdoc","doc"],
         "body": [
             "//-------------------------------------------------------------------",
             "${BLOCK_COMMENT_START}{Protheus.doc} ${TM_FILENAME_BASE}",
             "${2:description}",
             "@author  ${3:author}",
-            "@since   ${4:date}",
+            "@since   ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
             "@version ${5:version}",
             "${BLOCK_COMMENT_END}",
             "//-------------------------------------------------------------------"
         ],
         "description": "Protheus doc"
+    },
+    "Protheus minify doc": {
+        "prefix": ["pdoc","doc"],
+        "body": [
+            "//-------------------------------------------------------------------",
+            "${BLOCK_COMMENT_START}{Protheus.doc} ",
+            "${2:description}",
+            "${BLOCK_COMMENT_END}",
+            "//-------------------------------------------------------------------"
+        ],
+        "description": "Protheus minify doc"
     },
 }
