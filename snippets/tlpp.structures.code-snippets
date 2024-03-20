@@ -2,15 +2,36 @@
     "TryCatch": {
         "prefix": "TryCatch - TLPP",
         "body": [
-            "TRY",
-            "${1:<INTRUÇÕES>}",
-            "CATCH ${2:oError}",
-            "${3:<TRATATIVAS DO ERRO EM TRY>}",
-            "/*THROW ${4:oError} - (Opcional)*/",
-            "/*FINALLY - (Opcional)",
-            "${5:<TRATATIVAS ANTES DE SAIR DO TRYCATCH>}*/",
+            "TRY oException",
+            "\t${1:processamento...}",
+            "CATCH oException",
+            "\t${2:tratar erro...}",
             "ENDTRY"
         ],
-        "description": "Um bloco de código entre as expressões Try...Catch são testados e caso de um erro implícito no código (uma exceção), ou erro explicito declarado no programa, tem seu fluxo desviado para o bloco de tratamento de erro em catch."
-    }
+        "description": "Um bloco de código entre as expressões Try...Catch são testados e caso de um erro implícito no código (uma exceção), ou erro explicito declarado no programa, tem seu fluxo desviado para o bloco de tratamento de erro em catch. Veja em: https://tdn.totvs.com.br/display/tec/Try...Catch."
+    },
+    "TrowException":{
+        "prefix": "TrowException - TLPP",
+        "body": [
+            "oException:genCode := ${1:0}",
+            "oException:Description := \"${2:Descrição do erro...}\"",
+            "THROW oException"
+        ],
+        "description": "Lança uma exceção do tipo ErrorClass com as propriedades genCode, Description preenchidas. Veja em: https://tdn.totvs.com.br/display/tec/Try...Catch."
+    },
+    "ErrorClass": {
+        "prefix": "ErrorClass - TLPP",
+        "body": [
+            "oException := ErrorClass():New()"
+        ],
+        "description": "Cria uma nova instância de ErrorClass. Veja em: https://tdn.totvs.com.br/display/tec/Try...Catch."
+    },
+    "Finally": {
+        "prefix": "Finally - TLPP",
+        "body": [
+            "FINALLY",
+            "\t${1:processamento...}",
+        ],
+        "description": "O bloco de código dentro do Finally é executado independentemente de ter ocorrido ou não uma exceção. Veja em: https://tdn.totvs.com.br/display/tec/Try...Catch."
+    },
 }

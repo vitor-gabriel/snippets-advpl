@@ -183,7 +183,7 @@
             "\toModel:activate()",
             "",
             "\t //Cabeçalho do modelo (Enchoice)",
-            "\toModel:etValue( '${MASTER}', '${CAMPO}', ${VALOR})",
+            "\toModel:SetValue( '${MASTER}', '${CAMPO}', ${VALOR})",
             "",
             "\t//Grid do modelo (se existir)",
             "\toModel:SetValue( '${DETAIL}', '${CAMPO}', ${VALOR})",
