@@ -22,6 +22,14 @@
       },
       {
         "language": "advpl",
+        "path": "./snippets/database/advpl-database-ctree.code-snippets"
+      },
+      {
+        "language": "advpl",
+        "path": "./snippets/database/advpl-database-dbacess.code-snippets"
+      },
+      {
+        "language": "advpl",
         "path": "./snippets/advpl.commits.code-snippets"
       },
       {

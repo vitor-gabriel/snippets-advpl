@@ -1,0 +1,27 @@
+/*
+Pagina principal dessa documentação do TDN:
+https://tdn.totvs.com.br/pages/viewpage.action?pageId=527398719
+*/
+{
+    "CtreeDelIdxs": {
+        "prefix": "CtreeDelIdxs",
+        "body": [
+            "CtreeDelIdxs()"
+        ],
+        "description": "CtreeDelIdxs(): Exclui os índices da tabela corrente, com exceção do índice interno, apenas se o mesmo for c-tree e estiver exclusivo. Veja em: https://tdn.totvs.com.br/display/tec/ctreeDelIdxs."
+    },
+    "CtreeDelInt": {
+        "prefix": "CtreeDelInt",
+        "body": [
+            "CtreeDelIdxs(${1|cNome,/*cNome*/|})"
+        ],
+        "description": "CtreeDelIdxs(<cNome>): Exclui o índice interno da tabela c-tree, mesmo estando fechada. Veja em: https://tdn.totvs.com.br/display/tec/ctreeDelInt."
+    },
+    "CTUpdateIntName": {
+        "prefix": "CTUpdateIntName",
+        "body": [
+            "CTUpdateIntName()"
+        ],
+        "description": "CTUpdateIntName(): Atualiza o nome do índice interno de controle de numero de registro da estrutura da Tabela Ctree. Veja em: https://tdn.totvs.com.br/display/tec/CTUpdateIntName."
+    },
+}
