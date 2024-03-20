@@ -1,0 +1,61 @@
+/*
+Documentação retirada do site: https://terminaldeinformacao.com/2021/04/28/utilizando-fwalert-para-exibir-mensagens-no-protheus/
+*/
+{
+    "FWAlertError": {
+        "prefix": "FWAlertError",
+        "body": [
+            "FWAlertError(${1:cMensagem},${2:cTitulo})"
+        ],
+        "description": "FWAlertError(<cMensagem>, <cTitulo>): Mostra uma mensagem com um círculo vermelho e um x no meio."
+    },
+    "FWAlertExitPage": {
+        "prefix": "FWAlertExitPage",
+        "body": [
+            "FWAlertExitPage(${1:cMensagem},${2:cTitulo})"
+        ],
+        "description": "FWAlertExitPage(<cMensagem>, <cTitulo>): Mostra uma pergunta com 3 opções (Continuar editando, Salvar, Sair da Página)."
+    },
+    "FWAlertHelp": {
+        "prefix": "FWAlertHelp",
+        "body": [
+            "FWAlertHelp(${1:cMensagem},${2:cSolucao})"
+        ],
+        "description": "FWAlertHelp(<cMensagem>, <cSolucao>): Mostra uma mensagem de help e solução."
+    },
+    "FWAlertInfo": {
+        "prefix": "FWAlertInfo",
+        "body": [
+            "FWAlertInfo(${1:cMensagem},${2:cTitulo})"
+        ],
+        "description": "FWAlertInfo(<cMensagem>, <cTitulo>): Mensagem informativa com um círculo azul e um I no meio."
+    },
+    "FWAlertNoYes": {
+        "prefix": "FWAlertNoYes",
+        "body": [
+            "FWAlertNoYes(${1:cMensagem},${2:cTitulo})"
+        ],
+        "description": "FWAlertNoYes(<cMensagem>, <cTitulo>): Mensagem que tem 2 opções (Não e Sim)."
+    },
+    "FWAlertSuccess": {
+        "prefix": "FWAlertSuccess",
+        "body": [
+            "FWAlertSuccess(${1:cMensagem},${2:cTitulo})"
+        ],
+        "description": "FWAlertSuccess(<cMensagem>, <cTitulo>): Mostra uma mensagem com um círculo verde e um ícone de check."
+    },
+    "FWAlertWarning": {
+        "prefix": "FWAlertWarning",
+        "body": [
+            "FWAlertWarning(${1:cMensagem},${2:cTitulo})"
+        ],
+        "description": "FWAlertWarning(<cMensagem>, <cTitulo>): Mostra uma mensagem com um triângulo amarelo e uma exclamação no meio."
+    },
+    "FWAlertYesNo": {
+        "prefix": "FWAlertYesNo",
+        "body": [
+            "FWAlertYesNo(${1:cMensagem},${2:cTitulo})"
+        ],
+        "description": "FWAlertYesNo(<cMensagem>, <cTitulo>): Mensagem que tem 2 opções (Sim e Não)."
+    }
+}

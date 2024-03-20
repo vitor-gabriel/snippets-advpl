@@ -90,41 +90,9 @@
         ],
         "description": "MSParseFull-Analisa e converte uma Stored Procedure escrita em SQL ANSI, para um dos bancos de dados relacionais homologados. MSParseFull(<cSQL>,<cBD>,<cError>,<cOut>,[lIsQuery])"
     },
-    "TCAPIBuild": {
-        "prefix": "TCAPIBuild",
-        "body": [
-            "TCAPIBuild()"
-        ],
-        "description": "TCAPIBuild-Retorna a build do biblioteca client do DBAccess, a DBAPI. TCAPIBuild()"
-    },
-    "TCAlter": {
-        "prefix": "TCAlter",
-        "body": [
-            "TCAlter(${cTable},${aEstruturaAtual},${aEstruturaNova},@${1:/*nErro*/})"
-        ],
-        "description": "TCAlter-Altera a estrutura de uma tabela. TCAlter(<cTable>,<aEstruturaAtual>,<aEstruturaNova>,[@nErro])"
-    },
-    "TCCanOpen": {
-        "prefix": "TCCanOpen",
-        "body": [
-            "TCCanOpen(${cTable},${1:/*cIndex*/})"
-        ],
-        "description": "TCCanOpen-Verifica se uma tabela e/ou índice existe. TCCanOpen(<cTable>,[cIndex])"
-    },
-    "TCCommit": {
-        "prefix": "TCCommit",
-        "body": [
-            "TCCommit(${nOption},${1:/*xParam*/})"
-        ],
-        "description": "TCCommit-Realiza o controle de transação no DBAccess. TCCommit(<nOption>,[xParam])"
-    },
-    "TCDelFile": {
-        "prefix": "TCDelFile",
-        "body": [
-            "TCDelFile(${cTabela})"
-        ],
-        "description": "TCDelFile-Exclui uma tabela ou view de um banco relacional, através do DBAccess. TCDelFile(<cTabela>)"
-    },
+    
+    
+    
     "TCDelIndex": {
         "prefix": "TCDelIndex",
         "body": [
@@ -132,75 +100,12 @@
         ],
         "description": "TCDelIndex-Exclui um índice de um arquivo do banco de dados relacional por meio do DBAccess. TCDelIndex(<cTable>,<cIndex>)"
     },
-    "TCGenQry": {
-        "prefix": "TCGenQry",
-        "body": [
-            "TCGenQry(${xPar1},${xPar2},${cQuery})"
-        ],
-        "description": "TCGenQry-Permite a abertura de uma query diretamente no banco de dados utilizado na conexão atual, mediante uso da RDD TOPCONN. The return of this function should be passed as 3rd parameter of the function DbUseArea, as in the example below. TCGenQry(<xPar1>,<xPar2>,<cQuery>)"
-    },
-    "TCGetBuild": {
-        "prefix": "TCGetBuild",
-        "body": [
-            "TCGetBuild(${1|.T.,.F.,/*lDate*/|})"
-        ],
-        "description": "TCGetBuild-Retorna a build do DBAccess em que está conectado. TCGetBuild([lDate])"
-    },
-    "TCGetConn": {
-        "prefix": "TCGetConn",
-        "body": [
-            "TCGetConn()"
-        ],
-        "description": "TCGetConn-Recupera o número da conexão ativa com o DBAccess. TCGetConn()"
-    },
-    "TCGetDB": {
-        "prefix": "TCGetDB",
-        "body": [
-            "TCGetDB()"
-        ],
-        "description": "TCGetDB-Recupera o tipo do banco de dados relacional, em uso, pela conexão atual com o DBAccess. TCGetDB()"
-    },
-    "TCGetDBSID": {
-        "prefix": "TCGetDBSID",
-        "body": [
-            "TCGetDBSID()"
-        ],
-        "description": "TCGetDBSID-Retorna uma string que identifica a conexão atualmente em uso no SGDB utilizado. TCGetDBSID()"
-    },
-    "TCGetInfo": {
-        "prefix": "TCGetInfo",
-        "body": [
-            "TCGetInfo(${1:/*nInfo*/},${2:/*cParam*/})"
-        ],
-        "description": "TCGetInfo-Retorna informações sobre o DBAccess atualmente conectado. TCGetInfo([nInfo],[cParam])"
-    },
-    "TCGetSID": {
-        "prefix": "TCGetSID",
-        "body": [
-            "TCGetSID()"
-        ],
-        "description": "TCGetSID-Retorna o número do processo em uso no TOTVS | DBAccess para a conexão atual. TCGetSID()"
-    },
-    "TCIsConnected": {
-        "prefix": "TCIsConnected",
-        "body": [
-            "TCIsConnected(${1:/*nHwnd*/})"
-        ],
-        "description": "TCIsConnected-Função para verificar se está conectado no banco de dados. TCIsConnected([nHwnd])"
-    },
     "TCIsVLock": {
         "prefix": "TCIsVLock",
         "body": [
             "TCIsVLock()"
         ],
         "description": "TCIsVLock-Verifica se o servidor possui sistema de locks virtuais. TCIsVLock()"
-    },
-    "TCLink": {
-        "prefix": "TCLink",
-        "body": [
-            "TCLink(${1:/*cConn*/},${2:/*cServerAddr*/},${3:/*nPort*/})"
-        ],
-        "description": "TCLink-Cria uma nova conexão com um banco de dados SGBD através do DBAccess. TCLink([cConn],[cServerAddr],[nPort])"
     },
     "TCMaxMap": {
         "prefix": "TCMaxMap",
@@ -4030,61 +3935,5 @@
             "_SetNamedPrvt('${1:cVar}',${2:xValue},'${3:cFuncOwner}')"
         ],
         "description": "Cria uma variável private em uma das funções superiores na pilha, nomeada no 3 parâmetro"
-    },
-    "FWAlertError": {
-        "prefix": "FWAlertError",
-        "body": [
-            "FWAlertError(${1:cMensagem},${2:cTitulo})"
-        ],
-        "description": "Mostra uma mensagem com um círculo vermelho e um x no meio. FWAlertError(<cMensagem>,<cTitulo>)"
-    },
-    "FWAlertExitPage": {
-        "prefix": "FWAlertExitPage",
-        "body": [
-            "FWAlertExitPage(${1:cMensagem},${2:cTitulo})"
-        ],
-        "description": "Mostra uma pergunta com 3 opções (Continuar editando, Salvar, Sair da Página). FWAlertExitPage(<cMensagem>,<cTitulo>)"
-    },
-    "FWAlertHelp": {
-        "prefix": "FWAlertHelp",
-        "body": [
-            "FWAlertHelp(${1:cMensagem},${2:cSolucao})"
-        ],
-        "description": "Mostra uma mensagem de help e solução. FWAlertHelp(<cMensagem>,<cSolucao>)"
-    },
-    "FWAlertInfo": {
-        "prefix": "FWAlertInfo",
-        "body": [
-            "FWAlertInfo(${1:cMensagem},${2:cTitulo})"
-        ],
-        "description": "Mensagem informativa com um círculo azul e um I no meio. FWAlertInfo(<cMensagem>,<cTitulo>)"
-    },
-    "FWAlertNoYes": {
-        "prefix": "FWAlertNoYes",
-        "body": [
-            "FWAlertNoYes(${1:cMensagem},${2:cTitulo})"
-        ],
-        "description": "Mensagem que tem 2 opções (Não e Sim). FWAlertNoYes(<cMensagem>,<cTitulo>)"
-    },
-    "FWAlertSuccess": {
-        "prefix": "FWAlertSuccess",
-        "body": [
-            "FWAlertSuccess(${1:cMensagem},${2:cTitulo})"
-        ],
-        "description": "Mostra uma mensagem com um círculo verde e um ícone de check. FWAlertSuccess(<cMensagem>,<cTitulo>)"
-    },
-    "FWAlertWarning": {
-        "prefix": "FWAlertWarning",
-        "body": [
-            "FWAlertWarning(${1:cMensagem},${2:cTitulo})"
-        ],
-        "description": "Mostra uma mensagem com um triângulo amarelo e uma exclamação no meio. FWAlertWarning(<cMensagem>,<cTitulo>)"
-    },
-    "FWAlertYesNo": {
-        "prefix": "FWAlertYesNo",
-        "body": [
-            "FWAlertYesNo(${1:cMensagem},${2:cTitulo})"
-        ],
-        "description": "Mensagem que tem 2 opções (Sim e Não). FWAlertYesNo(<cMensagem>,<cTitulo>)"
     },
 }
