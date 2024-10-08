@@ -3,9 +3,9 @@
   "name": "snippets-for-advpl",
   "displayName": "Snippets for ADVPL",
   "description": "Snippets para uso na linguagem ADVPL/TLPP",
-  "version": "2.1.6",
+  "version": "2.2.0",
   "engines": {
-    "vscode": "^1.51.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Snippets"
@@ -82,7 +82,8 @@
     "advpl",
     "tlpp",
     "protheus",
-    "totvs"
+    "totvs",
+    "tds-vscode"
   ],
   "repository": {
     "url": "https://github.com/vitor-gabriel/snippets-advpl"
