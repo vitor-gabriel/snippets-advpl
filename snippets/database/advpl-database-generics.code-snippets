@@ -1,0 +1,573 @@
+/*
+Pagina principal dessa documentação do TDN:
+https://tdn.totvs.com.br/pages/viewpage.action?pageId=6063423
+*/
+{
+    "Alias": {
+        "prefix": "Alias",
+        "body": [
+            "Alias(${1|nWorkArea,/*nWorkArea*/|})"
+        ],
+        "description": "Retorna o alias de uma área de trabalho especificada. Veja em: https://tdn.totvs.com.br/display/tec/Alias."
+    },
+    "Bof": {
+        "prefix": "Bof",
+        "body": [
+            "Bof()"
+        ],
+        "description": "Informa se você está no início do arquivo/tabela. Veja em: https://tdn.totvs.com.br/display/tec/Bof."
+    },
+    "DBAppend": {
+        "prefix": "DBAppend",
+        "body": [
+            "DBAppend(${1|.T.,.F.,/*lUnlock*/|})"
+        ],
+        "description": "Adiciona um novo registro vazio na tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/DBAppend."
+    },
+    "DBChangeAlias": {
+        "prefix": "DBChangeAlias",
+        "body": [
+            "DBChangeAlias(${1:cOldAlias},${2:cNewAlias})"
+        ],
+        "description": "Altera o alias de um espaço de trabalho aberto. Veja em: https://tdn.totvs.com.br/display/tec/DBChangeAlias."
+    },
+    "DBClearAllFilter": {
+        "prefix": "DBClearAllFilter",
+        "body": [
+            "DBClearAllFilter()"
+        ],
+        "description": "Limpe todas as condições de filtro de todas as tabelas abertas. Veja em: https://tdn.totvs.com.br/display/tec/DBClearAllFilter."
+    },
+    "DBClearFilter": {
+        "prefix": "DBClearFilter",
+        "body": [
+            "DBClearFilter()"
+        ],
+        "description": "Limpa todas as condições de filtro. Veja em: https://tdn.totvs.com.br/display/tec/DBClearFilter."
+    },
+    "DBClearIndex": {
+        "prefix": "DBClearIndex",
+        "body": [
+            "DBClearIndex()"
+        ],
+        "description": "Fecha todos os índices na área de trabalho atual. Veja em: https://tdn.totvs.com.br/display/tec/DBClearIndex."
+    },
+    "DBCloseAll": {
+        "prefix": "DBCloseAll",
+        "body": [
+            "DBCloseAll()"
+        ],
+        "description": "Fecha todas as áreas de trabalho em uso. Veja em: https://tdn.totvs.com.br/display/tec/DBCloseAll."
+    },
+    "DBCloseArea": {
+        "prefix": "DBCloseArea",
+        "body": [
+            "DBCloseArea()"
+        ],
+        "description": "Fecha a corrente da área de trabalho. Veja em: https://tdn.totvs.com.br/display/tec/DBCloseArea."
+    },
+    "DBCommit": {
+        "prefix": "DBCommit",
+        "body": [
+            "DBCommit()"
+        ],
+        "description": "Salva em disco todas as atualizações pendentes na área de trabalho atual. Veja em: https://tdn.totvs.com.br/display/tec/DBCommit."
+    },
+    "DBCommitAll": {
+        "prefix": "DBCommitAll",
+        "body": [
+            "DBCommitAll()"
+        ],
+        "description": "Salva em disco todas as atualizações pendentes na área de trabalho atual. Veja em: https://tdn.totvs.com.br/display/tec/DBCommitAll."
+    },
+    "DBCreate": {
+        "prefix": "DBCreate",
+        "body": [
+            "DBCreate(${1:cName},${2:aStruct},${3|cDriver,/*cDriver*/|})"
+        ],
+        "description": "Define uma nova tabela ou um novo arquivo do tipo tabela e sua estrutura (fields). Veja em: https://tdn.totvs.com.br/display/tec/DBCreate."
+    },
+    "DBCreateIndex": {
+        "prefix": "DBCreateIndex",
+        "body": [
+            "DBCreateIndex(${1:cName},${2:cExprKey},${3|bExprKey,/*bExprKey*/|},${4|.T.,.F.,/*lUnique*/|})"
+        ],
+        "description": "Cria um índice para Tabela/View. Veja em: https://tdn.totvs.com.br/display/tec/DBCreateIndex."
+    },
+    "DBDelete": {
+        "prefix": "DBDelete",
+        "body": [
+            "DBDelete()"
+        ],
+        "description": "Marca o registro atual para exclusão. Veja em: https://tdn.totvs.com.br/display/tec/DBDelete."
+    },
+    "DBFieldInfo": {
+        "prefix": "DBFieldInfo",
+        "body": [
+            "DBFieldInfo(${1:nType},${2:nField})"
+        ],
+        "description": "Obtém informações de um campo específico da tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/DBFieldInfo."
+    },
+    "DBFilter": {
+        "prefix": "DBFilter",
+        "body": [
+            "DBFilter()"
+        ],
+        "description": "Retorna a expressão do filtro ativo na área de trabalho atual. Veja em: https://tdn.totvs.com.br/display/tec/DBFilter."
+    },
+    "DBFilterCB": {
+        "prefix": "DBFilterCB",
+        "body": [
+            "DBFilterCB()"
+        ],
+        "description": "Retorna o codeblock do filtro ativo na área de trabalho atual. Veja em: https://tdn.totvs.com.br/display/tec/DBFilterCB."
+    },
+    "DBGetActFld": {
+        "prefix": "DBGetActFld",
+        "body": [
+            "DBGetActFld()"
+        ],
+        "description": "Esta função retorna uma string, separada por vírgulas, contendo a lista de campos habilitados de um Alias de uma tabela do AdvPL. Veja em: https://tdn.totvs.com.br/display/tec/DBGetActFld."
+    },
+    "DBGoBottom": {
+        "prefix": "DBGoBottom",
+        "body": [
+            "DBGoBottom()"
+        ],
+        "description": "Posicione a tabela atual no último registro lógico. Veja em: https://tdn.totvs.com.br/display/tec/DBGoBottom."
+    },
+    "DBGoTo": {
+        "prefix": "DBGoTo",
+        "body": [
+            "DBGoTo(${1:nPos})"
+        ],
+        "description": "Posiciona a corrente da tabela em um determinado registro, de acordo com a ordem física (sequência sobre o recno). Veja em: https://tdn.totvs.com.br/display/tec/DBGoTo."
+    },
+    "DBGoTop": {
+        "prefix": "DBGoTop",
+        "body": [
+            "DBGoTop()"
+        ],
+        "description": "Posicione a tabela atual no primeiro registro lógico. Veja em: https://tdn.totvs.com.br/display/tec/DBGoTop."
+    },
+    "DBInfo": {
+        "prefix": "DBInfo",
+        "body": [
+            "DBInfo(${1:nInfo})"
+        ],
+        "description": "Obtenha informações sobre a tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/DBInfo."
+    },
+    "DBInInsert": {
+        "prefix": "DBInInsert",
+        "body": [
+            "DBInInsert()"
+        ],
+        "description": "Retorna se a tabela está em modo de inserção de registros ou não. Veja em: https://tdn.totvs.com.br/display/tec/DBInInsert."
+    },
+    "DBNickIndexKey": {
+        "prefix": "DBNickIndexKey",
+        "body": [
+            "DBNickIndexKey(${1:cNick})"
+        ],
+        "description": "Retorna a IndexKey, ou seja, a expressão do índice identificado pelo apelido. Veja em: https://tdn.totvs.com.br/display/tec/DBNickIndexKey."
+    },
+    "DBOrderInfo": {
+        "prefix": "DBOrderInfo",
+        "body": [
+            "DBOrderInfo(${1:nTipoInfo})"
+        ],
+        "description": "Obtenha informações sobre a ordem específica do índice. Veja em: https://tdn.totvs.com.br/display/tec/DBOrderInfo."
+    },
+    "DBOrderNickname": {
+        "prefix": "DBOrderNickname",
+        "body": [
+            "DBOrderNickname(${1:cApelido})"
+        ],
+        "description": "Seleciona a ordem de índice ativa por meio de seu apelido. Veja em: https://tdn.totvs.com.br/display/tec/DBOrderNickname."
+    },
+    "DBRecall": {
+        "prefix": "DBRecall",
+        "body": [
+            "DBRecall()"
+        ],
+        "description": "Desmarca o registro atual caso ele tenha sido marcado para exclusão. Veja em: https://tdn.totvs.com.br/display/tec/DBRecall."
+    },
+    "DBRecordInfo": {
+        "prefix": "DBRecordInfo",
+        "body": [
+            "DBRecordInfo(${1:nInfoType},${2|@nRecord,*@nRecord*/|})"
+        ],
+        "description": "Obtenha informações sobre o registro atual da tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/DBRecordInfo."
+    },
+    "DBRLock": {
+        "prefix": "DBRLock",
+        "body": [
+            "DBRLock(${1|nRec,/*nRec*/|})"
+        ],
+        "description": "Bloqueia o registro atual ou o especificado. Veja em: https://tdn.totvs.com.br/display/tec/DBRLock."
+    },
+    "DBRLockList": {
+        "prefix": "DBRLockList",
+        "body": [
+            "DBRLockList()"
+        ],
+        "description": "Retorna um array com a lista de registros bloqueados na tabela atual pelo processo atual. Veja em: https://tdn.totvs.com.br/display/tec/DBRLockList."
+    },
+    "DBRUnlock": {
+        "prefix": "DBRUnlock",
+        "body": [
+            "DBRUnlock(${1|nRec,/*nRec*/|})"
+        ],
+        "description": "Libera o registro dado bloqueado. Veja em: https://tdn.totvs.com.br/display/tec/DBRUnlock."
+    },
+    "DBSeek": {
+        "prefix": "DBSeek",
+        "body": [
+            "DBSeek(${1:xExp},${2|.T.,.F.,/*lSoftSeek*/|},${3|.T.,.F.,/*lLast*/|})"
+        ],
+        "description": "Localiza um registro com um valor específico da expressão de chave de índice. Veja em: https://tdn.totvs.com.br/display/tec/DBSeek."
+    },
+    "DBSelectArea": {
+        "prefix": "DBSelectArea",
+        "body": [
+            "DBSelectArea(${1:xArea})"
+        ],
+        "description": "Define o espaço de trabalho especificado como ativo. Veja em: https://tdn.totvs.com.br/display/tec/DBSelectArea."
+    },
+    "DBSetActFld": {
+        "prefix": "DBSetActFld",
+        "body": [
+            "DBSetActFld(${1:cCampos},${2|.T.,.F.,/*lAtivo*/|})"
+        ],
+        "description": "Um ou mais nomes de campo, separados por vírgulas, para serem habilitados ou desabilitados, ou \"*\" (asterisco) para referenciar todos os campos. Veja em: https://tdn.totvs.com.br/display/tec/DBSetActFld."
+    },
+    "DBSetDriver": {
+        "prefix": "DBSetDriver",
+        "body": [
+            "DBSetDriver(${1|cRDD,/*cRDD*/|})"
+        ],
+        "description": "Retorna o padrão RDD usado e pode alterá-lo. Veja em: https://tdn.totvs.com.br/display/tec/DBSetDriver."
+    },
+    "DBSetFilter": {
+        "prefix": "DBSetFilter",
+        "body": [
+            "DBSetFilter(${1:bCond},${2:cCond})"
+        ],
+        "description": "Define um filtro de visualização do alias corrente. Veja em: https://tdn.totvs.com.br/display/tec/DBSetFilter."
+    },
+    "DBSetIndex": {
+        "prefix": "DBSetIndex",
+        "body": [
+            "DBSetIndex(${1:cIndex})"
+        ],
+        "description": "Adiciona um ou mais pedidos de um determinado índice à área de trabalho ativa. Veja em: https://tdn.totvs.com.br/display/tec/DBSetIndex."
+    },
+    "DBSetNickname": {
+        "prefix": "DBSetNickname",
+        "body": [
+            "DBSetNickname(${1:cIndex},${2|cNickname,/*cNickname*/|})"
+        ],
+        "description": "Define um alias para um determinado pedido. Veja em: https://tdn.totvs.com.br/display/tec/DBSetNickname."
+    },
+    "DBSetOrder": {
+        "prefix": "DBSetOrder",
+        "body": [
+            "DBSetOrder(${1|nOrdem,/*nOrdem*/|})"
+        ],
+        "description": "Seleciona a ordem da área de trabalho ativa. Essa ordem é responsável pela sequência lógica dos registros da tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/DBSetOrder."
+    },
+    "DBSkip": {
+        "prefix": "DBSkip",
+        "body": [
+            "DBSkip(${1|nReg,/*nReg*/|})"
+        ],
+        "description": "Mover para o próximo registro na tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/DBSkip."
+    },
+    "DBSqlExec": {
+        "prefix": "DBSqlExec",
+        "body": [
+            "DBSqlExec(${1:cAlias},${2:cQuery},${3:cDriver})"
+        ],
+        "description": "Esta função faz execução de query no driver SQLite. Veja em: https://tdn.totvs.com.br/display/tec/DBSqlExec."
+    },
+    "DBSqlPlan": {
+        "prefix": "DBSqlPlan",
+        "body": [
+            "DBSqlPlan(${1:cQuery},${2:cRDD},${3:aResult},${4|nLevel,/*nLevel*/|},${5|cError,/*cError*/|})"
+        ],
+        "description": "Permite obter junto ao banco de dados SQLITE, o plano de execução de um statement SQL. Veja em: https://tdn.totvs.com.br/display/tec/DBSqlPlan."
+    },
+    "DBStruct": {
+        "prefix": "DBStruct",
+        "body": [
+            "DBStruct()"
+        ],
+        "description": "Retorna um array contendo a estrutura da tabela aberta sob o Alias atual. Veja em: https://tdn.totvs.com.br/display/tec/DBStruct."
+    },
+    "DBTblCopy": {
+        "prefix": "DBTblCopy",
+        "body": [
+            "DBTblCopy(${1:cSourceAlias},${2:cDestAlias})"
+        ],
+        "description": "Copia os dados de uma tabela origem para uma tabela destino. Veja em: https://tdn.totvs.com.br/display/tec/DBTblCopy."
+    },
+    "DBUnlock": {
+        "prefix": "DBUnlock",
+        "body": [
+            "DBUnlock()"
+        ],
+        "description": "Remove todos os bloqueios dos registros e arquivos da tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/DBUnlock."
+    },
+    "DBUnlockAll": {
+        "prefix": "DBUnlockAll",
+        "body": [
+            "DBUnlockAll()"
+        ],
+        "description": "Remove o bloqueio de todos os arquivos de registro e todas as tabelas abertas em uma área de trabalho. Veja em: https://tdn.totvs.com.br/display/tec/DBUnlockAll."
+    },
+    "DBUseArea": {
+        "prefix": "DBUseArea",
+        "body": [
+            "DBUseArea(${6|.T.,.F.,/*lNewArea*/|},${5:/*cDriver*/},${1:cFile},${2:cAlias},${3|.T.,.F.,/*lShared*/|},${4|.T.,.F.,/*lReadOnly*/|})"
+        ],
+        "description": "Abre uma tabela de dados na área de trabalho atual ou na primeira área de trabalho disponível. Veja em: https://tdn.totvs.com.br/display/tec/DBUseArea."
+    },
+    "Deleted": {
+        "prefix": "Deleted",
+        "body": [
+            "Deleted()"
+        ],
+        "description": "Verifica se o registro atual está marcado para exclusão. Veja em: https://tdn.totvs.com.br/display/tec/Deleted."
+    },
+    "Eof": {
+        "prefix": "Eof",
+        "body": [
+            "Eof()"
+        ],
+        "description": "Determina se o final do arquivo de dados foi atingido. Veja em: https://tdn.totvs.com.br/display/tec/Eof."
+    },
+    "FCount": {
+        "prefix": "FCount",
+        "body": [
+            "FCount()"
+        ],
+        "description": "Retorna o número de campos existentes na estrutura da área de trabalho ativa. Veja em: https://tdn.totvs.com.br/display/tec/FCount."
+    },
+    "Field": {
+        "prefix": "Field",
+        "body": [
+            "Field(${1:nPos})"
+        ],
+        "description": "Retorna o nome de um campo de uma tabela aberta. Veja em: https://tdn.totvs.com.br/display/tec/Field."
+    },
+    "FieldBlock": {
+        "prefix": "FieldBlock",
+        "body": [
+            "FieldBlock(${1:cField})"
+        ],
+        "description": "Retorna um bloco de código para um determinado campo da tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/FieldBlock."
+    },
+    "FieldGet": {
+        "prefix": "FieldGet",
+        "body": [
+            "FieldGet(${1:nPos})"
+        ],
+        "description": "Recupera o conteúdo de um campo do registro atualmente posicionado no alias selecionado, de sua posição ordinal na estrutura da tabela. Veja em: https://tdn.totvs.com.br/display/tec/FieldGet."
+    },
+    "FieldName": {
+        "prefix": "FieldName",
+        "body": [
+            "FieldName(${1:nPos})"
+        ],
+        "description": "Retorna o nome de um campo de uma tabela aberta. Veja em: https://tdn.totvs.com.br/display/tec/FieldName."
+    },
+    "FieldPos": {
+        "prefix": "FieldPos",
+        "body": [
+            "FieldPos(${1:cField})"
+        ],
+        "description": "Retorna a posição de um campo específico dentro da área de trabalho atual. Veja em: https://tdn.totvs.com.br/display/tec/FieldPos."
+    },
+    "FieldPut": {
+        "prefix": "FieldPut",
+        "body": [
+            "FieldPut(${1:nPos},${2:xValue})"
+        ],
+        "description": "Permite definir o valor de um campo em uma tabela usando a posição ordinal do campo na estrutura da tabela. Veja em: https://tdn.totvs.com.br/display/tec/FieldPut."
+    },
+    "FieldWBlock": {
+        "prefix": "FieldWBlock",
+        "body": [
+            "FieldWBlock(${1:cField},${2:nWokArea})"
+        ],
+        "description": "Retorna um bloco de código para um campo em uma área de trabalho aberta. Veja em: https://tdn.totvs.com.br/display/tec/FieldWBlock."
+    },
+    "FLock": {
+        "prefix": "FLock",
+        "body": [
+            "FLock()"
+        ],
+        "description": "Bloqueia uma tabela ou arquivo. Veja em: https://tdn.totvs.com.br/display/tec/FLock."
+    },
+    "Found": {
+        "prefix": "Found",
+        "body": [
+            "Found()"
+        ],
+        "description": "Recupera o resultado da última operação de pesquisa realizada pela cadeia de processamento. Veja em: https://tdn.totvs.com.br/display/tec/Found."
+    },
+    "GetDBExtension": {
+        "prefix": "GetDBExtension",
+        "body": [
+            "GetDBExtension()"
+        ],
+        "description": "Retorna a extensão dos arquivos de banco de dados. Veja em: https://tdn.totvs.com.br/display/tec/GetDBExtension."
+    },
+    "Header": {
+        "prefix": "Header",
+        "body": [
+            "Header()"
+        ],
+        "description": "Retorna o tamanho do cabeçalho do arquivo de banco de dados atual. Veja em: https://tdn.totvs.com.br/display/tec/Header."
+    },
+    "IndexKey": {
+        "prefix": "IndexKey",
+        "body": [
+            "IndexKey(${1:/*nOrdem*/})"
+        ],
+        "description": "Identifica a expressão da chave de índice especificada na área de trabalho atual e a retorna na forma de uma string. Veja em: https://tdn.totvs.com.br/display/tec/IndexKey."
+    },
+    "IndexOrd": {
+        "prefix": "IndexOrd",
+        "body": [
+            "IndexOrd()"
+        ],
+        "description": "Verifica a posição do índice atual e retorna a posição ocupada pelo fluxo de índice na lista de índices. Veja em: https://tdn.totvs.com.br/display/tec/IndexOrd."
+    },
+    "LastRec": {
+        "prefix": "LastRec",
+        "body": [
+            "LastRec()"
+        ],
+        "description": "Retorna o número do último registro inserido na tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/LastRec."
+    },
+    "NetErr": {
+        "prefix": "NetErr",
+        "body": [
+            "NetErr(${1|.T.,.F.,/*lValor*/|})"
+        ],
+        "description": "Retorna um valor booleano para identificar se a operação anterior causou um erro. Veja em: https://tdn.totvs.com.br/display/tec/NetErr."
+    },
+    "OrdBagExt": {
+        "prefix": "OrdBagExt",
+        "body": [
+            "OrdBagExt(${1|xExp,/*xExp*/|})"
+        ],
+        "description": "Índice da função de manutenção que retorna um caractere de expressão correspondente à extensão padrão dos índices de arquivo usados pelo alias atual. Esta extensão é determinada de acordo com o driver RDD é usado pelo alias atual. Veja em: https://tdn.totvs.com.br/display/tec/OrdBagExt."
+    },
+    "OrdBagName": {
+        "prefix": "OrdBagName",
+        "body": [
+            "OrdBagName(${1:xExp})"
+        ],
+        "description": "Retorna uma string com o alias da Ordem do Índice pesquisado. Veja em: https://tdn.totvs.com.br/display/tec/OrdBagName."
+    },
+    "OrdDescend": {
+        "prefix": "OrdDescend",
+        "body": [
+            "OrdDescend(${1:xExp},${3:/*cIndex*/},${2|.T.,.F.,/*lDesc*/|})"
+        ],
+        "description": "Altera o sinalizador da ordem (crescente/decrescente) do índice, mas não altera a ordem física dos registros na tabela. Veja em: https://tdn.totvs.com.br/display/tec/OrdDescend."
+    },
+    "OrdKey": {
+        "prefix": "OrdKey",
+        "body": [
+            "OrdKey(${1:cOrdem},${2|nPosicao,/*nPosicao*/|},${3|cArqIndice,/*cArqIndice*/|})"
+        ],
+        "description": "Verifica qual expressão de chave do pedido. Veja em: https://tdn.totvs.com.br/display/tec/OrdKey."
+    },
+    "OrdListAdd": {
+        "prefix": "OrdListAdd",
+        "body": [
+            "OrdListAdd(${1:cIndexFile},${2|cIndexTag,/*cIndexTag*/|})"
+        ],
+        "description": "Acrescenta uma ou mais ordens de determinado índice à área de trabalho ativa. Veja em: https://tdn.totvs.com.br/display/tec/OrdListAdd."
+    },
+    "OrdName": {
+        "prefix": "OrdName",
+        "body": [
+            "OrdName(${1|nOrd},${1|xParam,/*xParam*/|})"
+        ],
+        "description": "Retorna o nome do índice na ordem configurada. Veja em: https://tdn.totvs.com.br/display/tec/OrdName."
+    },
+    "OrdNumber": {
+        "prefix": "OrdNumber",
+        "body": [
+            "OrdNumber(${1:cOrdem},${1|cArqIndice,/*cArqIndice*/|})"
+        ],
+        "description": "Retorna a posição do pedido pelo nome. Veja em: https://tdn.totvs.com.br/display/tec/OrdNumber."
+    },
+    "OrdSetFocus": {
+        "prefix": "OrdSetFocus",
+        "body": [
+            "OrdSetFocus(${1|xExp,/*xExp*/|},${2|cOrdBagName,/*cOrdBagName*/|})"
+        ],
+        "description": "A função OrdSetFocus retorna a ordem do índice da cadeia e, opcionalmente, define o foco para uma nova ordem. Veja em: https://tdn.totvs.com.br/display/tec/OrdSetFocus."
+    },
+    "RDDName": {
+        "prefix": "RDDName",
+        "body": [
+            "RDDName()"
+        ],
+        "description": "Retorna o nome do RDD usado. Veja em: https://tdn.totvs.com.br/display/tec/RDDName."
+    },
+    "RDDSetDefault": {
+        "prefix": "RDDSetDefault",
+        "body": [
+            "RDDSetDefault(${1|cRDD,/*cRDD*/|})"
+        ],
+        "description": "RDDSetDefault-Retorna o padrão RDD usado e pode alterá-lo. Veja em: https://tdn.totvs.com.br/display/tec/RDDSetDefault."
+    },
+    "RealRDD": {
+        "prefix": "RealRDD",
+        "body": [
+            "RealRDD()"
+        ],
+        "description": "Retorna o driver que está realmente sendo usado para abrir tabelas locais (ISAM). Veja em: https://tdn.totvs.com.br/display/tec/RealRDD."
+    },
+    "Recno": {
+        "prefix": "Recno",
+        "body": [
+            "Recno()"
+        ],
+        "description": "Retorna o número do registro atualmente posicionado na área de trabalho ativa. Veja em: https://tdn.totvs.com.br/display/tec/Recno."
+    },
+    "RecSize": {
+        "prefix": "RecSize",
+        "body": [
+            "RecSize()"
+        ],
+        "description": "Retorna o tamanho de um registro da tabela aberta. Veja em: https://tdn.totvs.com.br/display/tec/RecSize."
+    },
+    "RLock": {
+        "prefix": "RLock",
+        "body": [
+            "RLock()"
+        ],
+        "description": "RLock-Apenas bloqueia o registro atual. Veja em: https://tdn.totvs.com.br/display/tec/RLock."
+    },
+    "Select": {
+        "prefix": "Select",
+        "body": [
+            "Select(${1|cAlias,/*cAlias*/|})"
+        ],
+        "description": "Select-Retorna o número da área de um alias especificado. Veja em: https://tdn.totvs.com.br/display/tec/Select."
+    },
+    "Used": {
+        "prefix": "Used",
+        "body": [
+            "Used()"
+        ],
+        "description": "Used-Determina se há um arquivo de banco de dados em uso na área de trabalho especificada. Veja em: https://tdn.totvs.com.br/display/tec/Used."
+    },
+}

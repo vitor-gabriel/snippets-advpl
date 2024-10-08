@@ -8,161 +8,161 @@ https://tdn.totvs.com.br/pages/viewpage.action?pageId=6063361
         "body": [
             "__Quit()"
         ],
-        "description": "__Quit(): Fecha o smartclient. No entanto, é importante ressaltar que ao ser executada nenhuma das rotinas de fechamento de arquivos e tabelas serão executadas, o que causará perda de qualquer informação que não tenha sido confirmada. Veja em: https://tdn.totvs.com.br/display/tec/__Quit."
+        "description": "Fecha o smartclient. No entanto, é importante ressaltar que ao ser executada nenhuma das rotinas de fechamento de arquivos e tabelas serão executadas, o que causará perda de qualquer informação que não tenha sido confirmada. Veja em: https://tdn.totvs.com.br/display/tec/__Quit."
     },
     "__SetPicture": {
         "prefix": "__SetPicture",
         "body": [
             "__SetPicture(${1|cPictMode,/*cPictMode*/|})"
         ],
-        "description": "__SetPicture([cPictMode]): Define o comportamento do número da imagem da aplicação no sistema, para operações de entrada de dados via comando no comando [ @ ... SAY/GET ... PICTURE ], bem como o comportamento na formatação de dados numéricos em string via função Advpl Transform(), quando usamos a função da imagem \"@E\", para formatar uma determinada string numérica usando o formato europeu ( onde a vírgula é usada como separador decimal e ponto(s) usado(s) como separador(s) de milhares). Veja em: https://tdn.totvs.com.br/display/tec/__SetPicture."
+        "description": "Define o comportamento do número da imagem da aplicação no sistema, para operações de entrada de dados via comando no comando [ @ ... SAY/GET ... PICTURE ], bem como o comportamento na formatação de dados numéricos em string via função Advpl Transform(), quando usamos a função da imagem \"@E\", para formatar uma determinada string numérica usando o formato europeu ( onde a vírgula é usada como separador decimal e ponto(s) usado(s) como separador(s) de milhares). Veja em: https://tdn.totvs.com.br/display/tec/__SetPicture."
     },
     "CmpBuildStr": {
         "prefix": "CmpBuildStr",
         "body": [
             "CmpBuildStr(${1:cLeft},${2:cRight})"
         ],
-        "description": "CmpBuildStr(<cLeft>, <cRight>): Compara duas strings em formato nnn.nnn.nnn.nnn, considerando os quatro primeiros blocos numéricos. Veja em: https://tdn.totvs.com.br/display/tec/CmpBuildStr."
+        "description": "Compara duas strings em formato nnn.nnn.nnn.nnn, considerando os quatro primeiros blocos numéricos. Veja em: https://tdn.totvs.com.br/display/tec/CmpBuildStr."
     },
     "DelKSysLog": {
         "prefix": "DelKSysLog",
         "body": [
             "DelKSysLog(${1:cKey})"
         ],
-        "description": "DelKSysLog(<ckey>): Remove um identificador previamente adicionado utilizando a função SetKSysLog. Veja em: https://tdn.totvs.com.br/display/tec/DelKSysLog."
+        "description": "Remove um identificador previamente adicionado utilizando a função SetKSysLog. Veja em: https://tdn.totvs.com.br/display/tec/DelKSysLog."
     },
     "GetBuild": {
         "prefix": "GetBuild",
         "body": [
             "GetBuild(${1|.T.,.F.,/*lType*/|})"
         ],
-        "description": "GetBuild([lType]): Retorna uma string com informações do ID de build) em uso pelo Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetBuild."
+        "description": "Retorna uma string com informações do ID de build) em uso pelo Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetBuild."
     },
     "GetClientIP": {
         "prefix": "GetClientIP",
         "body": [
             "GetClientIP(${1|.T.,.F.,/*lClientSide*/|})"
         ],
-        "description": "GetClientIP([lClientSide]): Retorna o número \"IP\" - Internet Protocol do servidor que o SmartClient está instalado. Veja em: https://tdn.totvs.com.br/display/tec/GetClientIP."
+        "description": "Retorna o número \"IP\" - Internet Protocol do servidor que o SmartClient está instalado. Veja em: https://tdn.totvs.com.br/display/tec/GetClientIP."
     },
     "GetCodePage": {
         "prefix": "GetCodePage",
         "body": [
             "GetCodePage()"
         ],
-        "description": "GetCodePage(): Retorna o encode definido no .ini do Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetCodePage."
+        "description": "Retorna o encode definido no .ini do Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetCodePage."
     },
     "GetComputerName": {
         "prefix": "GetComputerName",
         "body": [
             "GetComputerName()"
         ],
-        "description": "GetComputerName(): Retorna o nome da máquina (Hostname) onde o SmartClient está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetComputerName."
+        "description": "Retorna o nome da máquina (Hostname) onde o SmartClient está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetComputerName."
     },
     "GetEndPoint": {
         "prefix": "GetEndPoint",
         "body": [
             "GetEndPoint()"
         ],
-        "description": "GetEndPoint(): Retorna o nome do endpoint e porta conectada, seja IP ou hostname, utilizado para a conexão com o Appserver do ini do smartclient. Veja em: https://tdn.totvs.com.br/display/tec/GetEndPoint."
+        "description": "Retorna o nome do endpoint e porta conectada, seja IP ou hostname, utilizado para a conexão com o Appserver do ini do smartclient. Veja em: https://tdn.totvs.com.br/display/tec/GetEndPoint."
     },
     "GetEnv": {
         "prefix": "GetEnv",
         "body": [
             "GetEnv(${1:cVarEnv})"
         ],
-        "description": "GetEnv(<cVarEnv>): Determina o conteúdo de uma variável de ambiente (environment) do sistema operacional em uso no Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetEnv."
+        "description": "Determina o conteúdo de uma variável de ambiente (environment) do sistema operacional em uso no Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetEnv."
     },
     "GetEnvHost": {
         "prefix": "GetEnvHost",
         "body": [
             "GetEnvHost()"
         ],
-        "description": "GetEnvHost(): Retorna o host (nome/endereço), quando um ambiente Web, da página de chamada. Veja em: https://tdn.totvs.com.br/display/tec/GetEnvHost."
+        "description": "Retorna o host (nome/endereço), quando um ambiente Web, da página de chamada. Veja em: https://tdn.totvs.com.br/display/tec/GetEnvHost."
     },
     "GetEnvServer": {
         "prefix": "GetEnvServer",
         "body": [
             "GetEnvServer()"
         ],
-        "description": "GetEnvServer(): Retorna uma string com o nome do ambiente (environment) em execução no Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetEnvServer."
+        "description": "Retorna uma string com o nome do ambiente (environment) em execução no Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetEnvServer."
     },
     "GetHardwareId": {
         "prefix": "GetHardwareId",
         "body": [
             "GetHardwareId()"
         ],
-        "description": "GetHardwareId(): Retorna o número de série do drive onde está rodando o TOTVS | Servidor de aplicação. Veja em: https://tdn.totvs.com.br/display/tec/GetHardwareId."
+        "description": "Retorna o número de série do drive onde está rodando o TOTVS | Servidor de aplicação. Veja em: https://tdn.totvs.com.br/display/tec/GetHardwareId."
     },
     "GetImpWindows": {
         "prefix": "GetImpWindows",
         "body": [
             "GetImpWindows(${1|.T.,.F.,/*lDirect*/|})"
         ],
-        "description": "GetImpWindows(<lDirect>): Retorna um array com os nomes das impressoras disponíveis. https://tdn.totvs.com.br/display/tec/GetImpWindows."
+        "description": "Retorna um array com os nomes das impressoras disponíveis. Veja em: https://tdn.totvs.com.br/display/tec/GetImpWindows."
     },
     "GetLinesProg": {
         "prefix": "GetLinesProg",
         "body": [
             "GetLinesProg(${1:cFile})"
         ],
-        "description": "GetLinesProg(<cFile>): Retorna o numero de linhas executáveis do fonte onde ela foi chamada, ou GetLinesProg(\"fonte.extensao\") para retornar de um outro fonte. Veja em: https://tdn.totvs.com.br/display/tec/GetLinesProg."
+        "description": "Retorna o numero de linhas executáveis do fonte onde ela foi chamada, ou GetLinesProg(\"fonte.extensao\") para retornar de um outro fonte. Veja em: https://tdn.totvs.com.br/display/tec/GetLinesProg."
     },
     "GetPowerSC": {
         "prefix": "GetPowerSC",
         "body": [
             "GetPowerSC()"
         ],
-        "description": "GetPowerSC(): Retorna os elementos do plano de energia (power scheme) corrente do sistema operacional em uma matriz de arrays. Veja em: https://tdn.totvs.com.br/display/tec/GetPowerSC."
+        "description": "Retorna os elementos do plano de energia (power scheme) corrente do sistema operacional em uma matriz de arrays. Veja em: https://tdn.totvs.com.br/display/tec/GetPowerSC."
     },
     "GetPublicIP":{
         "prefix": "GetPublicIP",
         "body": [
             "GetPublicIP(${1|@bHasIP,/*@bHasIP*/|})"
         ],
-        "description": "GetPublicIP([@bHasIP]): Retorna o IP publico do smartclient (webapp), funciona apenas quando possui broker no ambiente. Sem broker retorna o mesmo que GetClientIP(.F.). Veja em: https://tdn.totvs.com.br/display/tec/GetPublicIP."
+        "description": "Retorna o IP publico do smartclient (webapp), funciona apenas quando possui broker no ambiente. Sem broker retorna o mesmo que GetClientIP(.F.). Veja em: https://tdn.totvs.com.br/display/tec/GetPublicIP."
     },
     "GetRemoteIniName": {
         "prefix": "GetRemoteIniName",
         "body": [
             "GetRemoteIniName()"
         ],
-        "description": "GetRemoteIniName(): Retorna o caminho completo do arquivo de configuração (*.INI) do SmartClient. Veja em: https://tdn.totvs.com.br/display/tec/GetRemoteIniName."
+        "description": "Retorna o caminho completo do arquivo de configuração (*.INI) do SmartClient. Veja em: https://tdn.totvs.com.br/display/tec/GetRemoteIniName."
     },
     "GetRemoteType": {
         "prefix": "GetRemoteType",
         "body": [
             "GetRemoteType(${1|@cLibVersion,/*@cLibVersion*/|})"
         ],
-        "description": "GetRemoteType([@cLibVersion])-Identifica o tipo e a versão do Smart Client que está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetRemoteType."
+        "description": "Identifica o tipo e a versão do Smart Client que está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetRemoteType."
     },
     "GetRmtDate": {
         "prefix": "GetRmtDate",
         "body": [
             "GetRmtDate()"
         ],
-        "description": "GetRmtDate(): Retorna a data atual do sistema definida na máquina em que o SmartClient está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtDate."
+        "description": "Retorna a data atual do sistema definida na máquina em que o SmartClient está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtDate."
     },
     "GetRmtInfo": {
         "prefix": "GetRmtInfo",
         "body": [
             "GetRmtInfo()"
         ],
-        "description": "GetRmtInfo(): Retorna um array com as configurações do computador que o SmartClient está executando. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtInfo."
+        "description": "Retorna um array com as configurações do computador que o SmartClient está executando. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtInfo."
     },
     "GetRmtTime": {
         "prefix": "GetRmtTime",
         "body": [
             "GetRmtTime()"
         ],
-        "description": "GetRmtTime(): Retorna a hora atual do sistema definida na máquina em que o SmartClient está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtTime."
+        "description": "Retorna a hora atual do sistema definida na máquina em que o SmartClient está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtTime."
     },
     "GetRmtVersion": {
         "prefix": "GetRmtVersion",
         "body": [
             "GetRmtVersion()"
         ],
-        "description": "GetRmtVersion(): Retorna uma string com a versão atual do SmartClient. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtVersion."
+        "description": "Retorna uma string com a versão atual do SmartClient. Veja em: https://tdn.totvs.com.br/display/tec/GetRmtVersion."
     },
     "GetServerIP": {
         "prefix": "GetServerIP",
@@ -176,175 +176,175 @@ https://tdn.totvs.com.br/pages/viewpage.action?pageId=6063361
         "body": [
             "GetServerType()"
         ],
-        "description": "GetServerType(): Retorna um inteiro que representa o tipo de execução do Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetServerType."
+        "description": "Retorna um inteiro que representa o tipo de execução do Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetServerType."
     },
     "GetSrvArch": {
         "prefix": "GetSrvArch",
         "body": [
             "GetSrvArch()"
         ],
-        "description": "GetSrvArch(): Retorna a arquitetura do processador que está sendo executado o Application Server. Suporta os sistemas operacionais Windows e Linux. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvArch."
+        "description": "Retorna a arquitetura do processador que está sendo executado o Application Server. Suporta os sistemas operacionais Windows e Linux. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvArch."
     },
     "GetSrvGlbInfo": {
         "prefix": "GetSrvGlbInfo",
         "body": [
             "GetSrvGlbInfo()"
         ],
-        "description": "GetSrvGlbInfo(): Retorna uma string contendo um resumo do status atual do servidor de aplicativos de serviço, incluindo o detalhamento de processos internos, processos de usuário, memória de serviço, núcleo de pools de memória do servidor de aplicativos, memória de processo e acumuladores globais. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvGlbInfo"
+        "description": "Retorna uma string contendo um resumo do status atual do servidor de aplicativos de serviço, incluindo o detalhamento de processos internos, processos de usuário, memória de serviço, núcleo de pools de memória do servidor de aplicativos, memória de processo e acumuladores globais. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvGlbInfo"
     },
     "GetSrvInfo": {
         "prefix": "GetSrvInfo",
         "body": [
             "GetSrvInfo()"
         ],
-        "description": "GetSrvInfo(): Retorna um array com as configurações do servidor onde o TOTVS | O servidor de aplicativos foi instanciado. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvInfo."
+        "description": "Retorna um array com as configurações do servidor onde o TOTVS | O servidor de aplicativos foi instanciado. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvInfo."
     },
     "GetSrvIniName": {
         "prefix": "GetSrvIniName",
         "body": [
             "GetSrvIniName()"
         ],
-        "description": "GetSrvIniName(): Retorna o nome do arquivo de configuração (*.INI) do Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvIniName."
+        "description": "Retorna o nome do arquivo de configuração (*.INI) do Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvIniName."
     },
     "GetSrvMemInfo": {
         "prefix": "GetSrvMemInfo",
         "body": [
             "GetSrvMemInfo()"
         ],
-        "description": "GetSrvMemInfo(): Recupera a memória de status da máquina em que o Application Server está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvMemInfo."
+        "description": "Recupera a memória de status da máquina em que o Application Server está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvMemInfo."
     },
     "GetSrvOSInfo": {
         "prefix": "GetSrvOSInfo",
         "body": [
             "GetSrvOSInfo()"
         ],
-        "description": "GetSrvOSInfo(): Retorna informações do sistema operacional em que o Application Server está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvOSInfo."
+        "description": "Retorna informações do sistema operacional em que o Application Server está sendo executado. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvOSInfo."
     },
     "GetSrvVersion": {
         "prefix": "GetSrvVersion",
         "body": [
             "GetSrvVersion()"
         ],
-        "description": "GetSrvVersion(): Retorna a versão atual do binário do Appserver. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvVersion."
+        "description": "Retorna a versão atual do binário do Appserver. Veja em: https://tdn.totvs.com.br/display/tec/GetSrvVersion."
     },
     "GetTempPath": {
         "prefix": "GetTempPath",
         "body": [
             "GetTempPath(${1|.T.,.F.,/*lLocal*/|}, ${2|.T.,.F.,/*lWeb*/|})"
         ],
-        "description": "GetTempPath([lLocal], [lWeb]): Retorna o caminho para a pasta temporária do sistema atual. Veja em: https://tdn.totvs.com.br/display/tec/GetTempPath."
+        "description": "Retorna o caminho para a pasta temporária do sistema atual. Veja em: https://tdn.totvs.com.br/display/tec/GetTempPath."
     },
     "GetUserInfoArray": {
         "prefix": "GetUserInfoArray",
         "body": [
             "GetUserInfoArray(${1|.T.,.F.,/*lShowMoreInfo*/|})"
         ],
-        "description": "GetUserInfoArray([lShowMoreInfo]): Retorna um array multidimensional com as informações de cada um dos processos em execução no Protheus Server e/ou Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetUserInfoArray."
+        "description": "Retorna um array multidimensional com as informações de cada um dos processos em execução no Protheus Server e/ou Application Server. Veja em: https://tdn.totvs.com.br/display/tec/GetUserInfoArray."
     },
     "GetWebJob": {
         "prefix": "GetWebJob",
         "body": [
             "GetWebJob()"
         ],
-        "description": "GetWebJob(): Retorna o nome de usuário da thread em que foi executada. Veja em: https://tdn.totvs.com.br/display/tec/GetWebJob."
+        "description": "Retorna o nome de usuário da thread em que foi executada. Veja em: https://tdn.totvs.com.br/display/tec/GetWebJob."
     },
     "InteropAgt":{
         "prefix": "InteropAgt",
         "body": [
             "InteropAgt(${1|.T.,.F.,/*lLog*/|}, ${2|.T.,.F.,/*lUseDefault*/|}, ${3|cParam,/*cParam*/|}, ${4|nParam,/*nParam*/|})"
         ],
-        "description": "([lLog], [lUseDefault], [cParam], [nParam]) : Ativa o uso do interop Agent de biblioteca dinâmica (DLL/SO) do Smart Client, que passa a executar em processo destacado. Veja em: https://tdn.totvs.com.br/display/tec/InteropAgt+-+Beta."
+        "description": "Ativa o uso do interop Agent de biblioteca dinâmica (DLL/SO) do Smart Client, que passa a executar em processo destacado. Veja em: https://tdn.totvs.com.br/display/tec/InteropAgt+-+Beta."
     },
     "IsPlugin": {
         "prefix": "IsPlugin",
         "body": [
             "IsPlugin()"
         ],
-        "description": "IsPlugin(): Retorna se o Smart Client estiver sendo executado em um plug-in ActiveX. Veja em: https://tdn.totvs.com.br/display/tec/IsPlugin."
+        "description": "Retorna se o Smart Client estiver sendo executado em um plug-in ActiveX. Veja em: https://tdn.totvs.com.br/display/tec/IsPlugin."
     },
     "IsPrinter2": {
         "prefix": "IsPrinter2",
         "body": [
             "IsPrinter2(${1:cString}, ${2|.T.,.F.,/*lValue*/|}, ${3|1/*PRT_CLIENT*/,2/*PRT_SERVER*/,/*nValue*/|})"
         ],
-        "description": "IsPrinter2(<cString>, [lValue], [nValue]): Indica o status de uma determinada porta de impressão. Veja em: https://tdn.totvs.com.br/display/tec/IsPrinter2."
+        "description": "Indica o status de uma determinada porta de impressão. Veja em: https://tdn.totvs.com.br/display/tec/IsPrinter2."
     },
     "IsRmt64": {
         "prefix": "IsRmt64",
         "body": [
             "IsRmt64()"
         ],
-        "description": "IsRmt64(): Retorna se o binário TOTVS | SmartClient rodando na estação é arquitetura de 64 bits ou não. Veja em: https://tdn.totvs.com.br/display/tec/IsRmt64."
+        "description": "Retorna se o binário TOTVS | SmartClient rodando na estação é arquitetura de 64 bits ou não. Veja em: https://tdn.totvs.com.br/display/tec/IsRmt64."
     },
     "IsSecure": {
         "prefix": "IsSecure",
         "body": [
             "IsSecure()"
         ],
-        "description": "IsSecure(): Retorna um valor booleano informando se a conexão é segura ou não. Veja em: https://tdn.totvs.com.br/display/tec/IsSecure."
+        "description": "Retorna um valor booleano informando se a conexão é segura ou não. Veja em: https://tdn.totvs.com.br/display/tec/IsSecure."
     },
     "IsSrv64":{
         "prefix": "IsSrv64",
         "body": [
             "IsSrv64()"
         ],
-        "description": "IsSrv64(): Verifica se o Application Server está sendo executado em ambiente 64 bit. Veja em: https://tdn.totvs.com.br/display/tec/IsSrv64."
+        "description": "Verifica se o Application Server está sendo executado em ambiente 64 bit. Veja em: https://tdn.totvs.com.br/display/tec/IsSrv64."
     },
     "IsSrvBigE": {
         "prefix": "IsSrvBigE",
         "body": [
             "IsSrvBigE()"
         ],
-        "description": "IsSrvBigE(): Verifica se o tipo de envio de dados do servidor é Big Endian. Veja em: https://tdn.totvs.com.br/display/tec/IsSrvBigE."
+        "description": "Verifica se o tipo de envio de dados do servidor é Big Endian. Veja em: https://tdn.totvs.com.br/display/tec/IsSrvBigE."
     },
     "IsSrvUnix": {
         "prefix": "IsSrvUnix",
         "body": [
             "IsSrvUnix()"
         ],
-        "description": "IsSrvUnix-Informa se o Application Server está rodando em ambiente Unix, Linux ou Microsoft Windows. IsSrvUnix()"
+        "description": "Informa se o Application Server está rodando em ambiente Unix, Linux ou Microsoft Windows. IsSrvUnix()"
     },
     "MetricsName": {
         "prefix": "MetricsName",
         "body": [
             "MetricsName(${1|.T.,.F.,/*lWithVersion*/|})"
         ],
-        "description": "MetricsName([lWithVersion]): Retorna um Objeto no formato Json com os nomes de todas as métricas disponíveis para coleta e a versão da api quando solicitado. Veja em: https://tdn.totvs.com.br/display/tec/MetricsName."
+        "description": "Retorna um Objeto no formato Json com os nomes de todas as métricas disponíveis para coleta e a versão da api quando solicitado. Veja em: https://tdn.totvs.com.br/display/tec/MetricsName."
     },
     "MetricsRead": {
         "prefix": "MetricsRead",
         "body": [
             "MetricsRead(${1|aMetricName,/*aMetricName*/|})"
         ],
-        "description": "MetricsRead([aMetricName]): Retorna um objeto Json com as métricas coletadas pelo sistema. Veja em: https://tdn.totvs.com.br/display/tec/MetricsRead."
+        "description": "Retorna um objeto Json com as métricas coletadas pelo sistema. Veja em: https://tdn.totvs.com.br/display/tec/MetricsRead."
     },
     "RemoteXVersion": {
         "prefix": "RemoteXVersion",
         "body": [
             "RemoteXVersion()"
         ],
-        "description": "RemoteXVersion(): Retorna a compilação do Smart Client ActiveX. Veja em: https://tdn.totvs.com.br/display/tec/RemoteXVersion."
+        "description": "Retorna a compilação do Smart Client ActiveX. Veja em: https://tdn.totvs.com.br/display/tec/RemoteXVersion."
     },
     "SerialNumber": {
         "prefix": "SerialNumber",
         "body": [
             "SerialNumber(${1|cDrive,/*cDrive*/|})"
         ],
-        "description": "SerialNumber([cDrive]): Retorna o número de série de uma unidade na máquina Windows onde está executando o TOTVS | Servidor de aplicação. Veja em: https://tdn.totvs.com.br/display/tec/SerialNumber."
+        "description": "Retorna o número de série de uma unidade na máquina Windows onde está executando o TOTVS | Servidor de aplicação. Veja em: https://tdn.totvs.com.br/display/tec/SerialNumber."
     },
     "Set": {
         "prefix": "Set",
         "body": [
             "Set(${1:nParam},${2|xValue,/*xValue*/|})"
         ],
-        "description": "Set(<nParam>, [xValue]): Realiza a configuração de alguns parâmetros do sistema, permite também retornar o valor previamente configurado. Veja em: https://tdn.totvs.com.br/display/tec/Set."
+        "description": "Realiza a configuração de alguns parâmetros do sistema, permite também retornar o valor previamente configurado. Veja em: https://tdn.totvs.com.br/display/tec/Set."
     },
     "SetKSysLog": {
         "prefix": "SetKSysLog",
         "body": [
             "SetKSysLog(${1:ckey},${2:cValor})"
         ],
-        "description": "SetKSysLog(<ckey>, <cValor>): Adiciona um identificador no formato [chave valor] a todas mensagens enviadas ao syslog, através das funções Conout e LogMsg. Veja em: https://tdn.totvs.com.br/display/tec/SetKSysLog."
+        "description": "Adiciona um identificador no formato [chave valor] a todas mensagens enviadas ao syslog, através das funções Conout e LogMsg. Veja em: https://tdn.totvs.com.br/display/tec/SetKSysLog."
     },
     
     "ShowInfMem": {
@@ -352,42 +352,42 @@ https://tdn.totvs.com.br/pages/viewpage.action?pageId=6063361
         "body": [
             "ShowInfMem(${1|cParam1,/*cParam1*/|},${2|@aParam2,/*@aParam2*/|})"
         ],
-        "description": "ShowInfMem([cParam1],[aParam2]): A função ShowInfMem visa auxiliar na verificação do aumento, acúmulo, ou simplesmente para um gerenciamento de memória ao programador para verificar em uma determinada \"instância\" do seu programa como esta os contadores de memória pelo Smartheap. Veja em: https://tdn.totvs.com.br/display/tec/ShowInfMem+-+ADVPL."
+        "description": "A função ShowInfMem visa auxiliar na verificação do aumento, acúmulo, ou simplesmente para um gerenciamento de memória ao programador para verificar em uma determinada \"instância\" do seu programa como esta os contadores de memória pelo Smartheap. Veja em: https://tdn.totvs.com.br/display/tec/ShowInfMem+-+ADVPL."
     },
     "SrvDisplay": {
         "prefix": "SrvDisplay",
         "body": [
             "SrvDisplay()"
         ],
-        "description": "SrvDisplay(): Função para verificar se o Application Server esta sendo executado em uma sessão com interface gráfica. Veja em: https://tdn.totvs.com.br/display/tec/SrvDisplay."
+        "description": "Função para verificar se o Application Server esta sendo executado em uma sessão com interface gráfica. Veja em: https://tdn.totvs.com.br/display/tec/SrvDisplay."
     },
     "ThreadCount": {
         "prefix": "ThreadCount",
         "body": [
             "ThreadCount()"
         ],
-        "description": "ThreadCount(): Retorna o número de threads/processos ativos no serviço do Application Server onde a função foi executada. Veja em: https://tdn.totvs.com.br/display/tec/ThreadCount"
+        "description": "Retorna o número de threads/processos ativos no serviço do Application Server onde a função foi executada. Veja em: https://tdn.totvs.com.br/display/tec/ThreadCount"
     },
     "ThreadID": {
         "prefix": "ThreadID",
         "body": [
             "ThreadID()"
         ],
-        "description": "ThreadID(): Retorna o ID (número de identificação) do thread no qual a chamada da função foi executada. Veja em: https://tdn.totvs.com.br/display/tec/ThreadID."
+        "description": "Retorna o ID (número de identificação) do thread no qual a chamada da função foi executada. Veja em: https://tdn.totvs.com.br/display/tec/ThreadID."
     },
     "UUIDRandom": {
         "prefix": "UUIDRandom",
         "body": [
             "UUIDRandom()"
         ],
-        "description": "UUIDRandom(): Cria um identificador UUID (do inglês Universally Unique IDentifier) exclusivo. Veja em: https://tdn.totvs.com.br/display/tec/UUIDRandom."
+        "description": "Cria um identificador UUID (do inglês Universally Unique IDentifier) exclusivo. Veja em: https://tdn.totvs.com.br/display/tec/UUIDRandom."
     },
     "UUIDRandomSeq": {
         "prefix": "UUIDRandomSeq",
         "body": [
             "UUIDRandomSeq()"
         ],
-        "description": "UUIDRandomSeq(): Cria um identificador UUID (do inglês Universally Unique IDentifier) exclusivo sequencial. Veja em: https://tdn.totvs.com.br/display/tec/UUIDRandomSeq."
+        "description": "Cria um identificador UUID (do inglês Universally Unique IDentifier) exclusivo sequencial. Veja em: https://tdn.totvs.com.br/display/tec/UUIDRandomSeq."
     },
 
 }

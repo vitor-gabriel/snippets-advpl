@@ -15,7 +15,7 @@
         "description": "Protheus doc"
     },
     "Protheus minify doc": {
-        "prefix": ["pdoc","doc"],
+        "prefix": ["pmdoc","mdoc"],
         "body": [
             "${LINE_COMMENT}-------------------------------------------------------------------",
             "${BLOCK_COMMENT_START}{Protheus.doc} ",

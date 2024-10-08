@@ -30,6 +30,10 @@
       },
       {
         "language": "advpl",
+        "path": "./snippets/database/advpl-database-generics.code-snippets"
+      },
+      {
+        "language": "advpl",
         "path": "./snippets/generics/advpl-fwalerts.code-snippets"
       },
       {

@@ -1,6 +1,6 @@
 /*
 Pagina principal dessa documentação do TDN:
-https://tdn.totvs.com.br/pages/viewpage.action?pageId=527398719
+https://tdn.totvs.com.br/pages/viewpage.action?pageId=6063404
 */
 {
     "MSParse": {
@@ -8,167 +8,384 @@ https://tdn.totvs.com.br/pages/viewpage.action?pageId=527398719
         "body": [
             "MSParse(${1:cSQL},${2:cBD},${3|.T.,.F.,/*lIsQuery*/|})"
         ],
-        "description": "MSParse(<cSQL>, <cBD>, [lComp]): Analisa e converte uma Stored Procedure escrita em SQL ANSI, para um dos bancos de dados relacionais homologados. Veja em: https://tdn.totvs.com.br/display/tec/MSParse."
+        "description": "Analisa e converte uma Stored Procedure escrita em SQL ANSI, para um dos bancos de dados relacionais homologados. Veja em: https://tdn.totvs.com.br/display/tec/MSParse."
     },
     "MSParseError": {
         "prefix": "MSParseError",
         "body": [
             "MSParseError()"
         ],
-        "description": "MSParseError(): Retorna o último erro encontrado ao executar a função MSParse(). Veja em: https://tdn.totvs.com.br/display/tec/MSParseError."
+        "description": "Retorna o último erro encontrado ao executar a função MSParse(). Veja em: https://tdn.totvs.com.br/display/tec/MSParseError."
     },
     "MSParseFull": {
         "prefix": "MSParseFull",
         "body": [
             "MSParseFull(${1:cSQL},${2:cBD},${3:cError},${4:cOut})"
         ],
-        "description": "MSParseFull(<cSQL>, <cBD>, <cError>, <cOut>): Analisa e converte uma Stored Procedure escrita em SQL ANSI, para um dos bancos de dados relacionais homologados. Veja em: https://tdn.totvs.com.br/display/tec/MSParseFull."
+        "description": "Analisa e converte uma Stored Procedure escrita em SQL ANSI, para um dos bancos de dados relacionais homologados. Veja em: https://tdn.totvs.com.br/display/tec/MSParseFull."
     },
     "TCAlter": {
         "prefix": "TCAlter",
         "body": [
             "TCAlter(${1:cTable},${2:aEstruturaAtual},${3:aEstruturaNova},${4|@nErro,/*@nErro*/|})"
         ],
-        "description": "TCAlter(<cTable>, <aEstruturaAtual>, <aEstruturaNova>, [@nErro]: Altera a estrutura de uma tabela. Veja em: https://tdn.totvs.com.br/display/tec/TCAlter."
+        "description": "Altera a estrutura de uma tabela. Veja em: https://tdn.totvs.com.br/display/tec/TCAlter."
     },
     "TCAPIBuild": {
         "prefix": "TCAPIBuild",
         "body": [
             "TCAPIBuild()"
         ],
-        "description": "TCAPIBuild(): Retorna a build do biblioteca client do DBAccess, a DBAPI. Veja em: https://tdn.totvs.com.br/display/tec/TCAPIBuild."
+        "description": "Retorna a build do biblioteca client do DBAccess, a DBAPI. Veja em: https://tdn.totvs.com.br/display/tec/TCAPIBuild."
     },
-    "TCAPIVersion":{
+    "TCAPIVersion": {
         "prefix": "TCAPIVersion",
         "body": [
             "TCAPIVersion()"
         ],
-        "description": "TCAPIVersion(): Retorna a versão do biblioteca client do DBAccess, a DBAPI. Veja em: https://tdn.totvs.com.br/display/tec/TCAPIVersion."
+        "description": "Retorna a versão do biblioteca client do DBAccess, a DBAPI. Veja em: https://tdn.totvs.com.br/display/tec/TCAPIVersion."
     },
     "TCCanOpen": {
         "prefix": "TCCanOpen",
         "body": [
             "TCCanOpen(${1:cTable},${2|cIndex,/*cIndex*/|})"
         ],
-        "description": "TCCanOpen(<cTable>, [cIndex]): Verifica se uma tabela e/ou índice existe. Veja em: https://tdn.totvs.com.br/display/tec/TCCanOpen."
+        "description": "Verifica se uma tabela e/ou índice existe. Veja em: https://tdn.totvs.com.br/display/tec/TCCanOpen."
     },
-    "TCCheckup":{
+    "TCCheckup": {
         "prefix": "TCCheckup",
         "body": [
             "TCCheckup(${1|@cMsg,/*@cMsg*/|})"
         ],
-        "description": "TCCheckup([@cMsg]): Verifica a integridade de uma tabela e/ou índice. Veja em: https://tdn.totvs.com.br/display/tec/TCCheckUp."
+        "description": "Verifica a integridade de uma tabela e/ou índice. Veja em: https://tdn.totvs.com.br/display/tec/TCCheckUp."
     },
     "TCCommit": {
         "prefix": "TCCommit",
         "body": [
             "TCCommit(${1:nOption},${2|xParam,/*xParam*/|})"
         ],
-        "description": "TCCommit(<nOption>, [xParam]): Realiza o controle de transação no DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCCommit."
+        "description": "Realiza o controle de transação no DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCCommit."
     },
     "TCConfig": {
         "prefix": "TCConfig",
         "body": [
             "TCConfig(${1:cParms})"
         ],
-        "description": "TCConfig(<cParms>): Permite alterar e consultar definições e configurações diversas do DBAccess em tempo de execução. Veja em: https://tdn.totvs.com.br/display/tec/TCConfig."
+        "description": "Permite alterar e consultar definições e configurações diversas do DBAccess em tempo de execução. Veja em: https://tdn.totvs.com.br/display/tec/TCConfig."
+    },
+    "TCDBInsert": {
+        "prefix": "TCDBInsert",
+        "body": [
+            "TCDBInsert(${1:cTable},${2:cCols},${3:aData})"
+        ],
+        "description": "Realiza a inclusão de registros em blocos, tornando o processo muito mais rápido. Veja em: https://tdn.totvs.com.br/display/tec/TCDBInsert."
     },
     "TCDelFile": {
         "prefix": "TCDelFile",
         "body": [
             "TCDelFile(${1:cName})"
         ],
-        "description": "TCDelFile(<cName>): Exclui uma tabela ou view de um banco relacional, através do DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCDelFile."
+        "description": "Exclui uma tabela ou view de um banco relacional, através do DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCDelFile."
     },
     "TCDrivers": {
         "prefix": "TCDrivers",
         "body": [
             "TCDrivers()"
         ],
-        "description": "TCDrivers(): Retorna um array com os dados dos drivers ODBC instalados na máquina em que está o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCDrivers."
+        "description": "Retorna um array com os dados dos drivers ODBC instalados na máquina em que está o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCDrivers."
     },
     "TCGenQry": {
         "prefix": "TCGenQry",
         "body": [
             "TCGenQry(${1:xPar1},${2:xPar2},${3:cQuery})"
         ],
-        "description": "TCGenQry(<xPar1>,<xPar2>,<cQuery>): Permite a abertura de uma query diretamente no banco de dados utilizado na conexão atual, mediante uso da RDD TOPCONN. The return of this function should be passed as 3rd parameter of the function DbUseArea, as in the example below. Veja em: https://tdn.totvs.com.br/display/tec/TCGenQry."
+        "description": "Permite a abertura de uma query diretamente no banco de dados utilizado na conexão atual, mediante uso da RDD TOPCONN. The return of this function should be passed as 3rd parameter of the function DbUseArea, as in the example below. Veja em: https://tdn.totvs.com.br/display/tec/TCGenQry."
     },
-    "TCGenQry2":{
+    "TCGenQry2": {
         "prefix": "TCGenQry2",
         "body": [
             "TCGenQry2(${1:xPar1},${2:xPar2},${3:cQuery},${4:aValues})"
         ],
-        "description": "TCGenQry2(<xPar1>,<xPar2>,<cQuery>,<aValues>): Permite a abertura de uma query diretamente no banco de dados utilizado na conexão atual, mediante uso da RDD TOPCONN, informando através de um array de parâmetros os conteúdos dos campos para fazer BIND de valores na Query informada. Veja em: https://tdn.totvs.com.br/display/tec/TCGenQry2."
+        "description": "Permite a abertura de uma query diretamente no banco de dados utilizado na conexão atual, mediante uso da RDD TOPCONN, informando através de um array de parâmetros os conteúdos dos campos para fazer BIND de valores na Query informada. Veja em: https://tdn.totvs.com.br/display/tec/TCGenQry2."
     },
     "TCGetBuild": {
         "prefix": "TCGetBuild",
         "body": [
             "TCGetBuild(${1|.T.,.F.,/*lDate*/|})"
         ],
-        "description": "TCGetBuild([lDate]):Retorna a build do DBAccess em que está conectado. Veja em: https://tdn.totvs.com.br/display/tec/TCGetBuild."
+        "description": "Retorna a build do DBAccess em que está conectado. Veja em: https://tdn.totvs.com.br/display/tec/TCGetBuild."
     },
     "TCGetConn": {
         "prefix": "TCGetConn",
         "body": [
             "TCGetConn()"
         ],
-        "description": "TCGetConn(): Recupera o número da conexão ativa com o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCGetConn."
+        "description": "Recupera o número da conexão ativa com o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCGetConn."
     },
     "TCGetDB": {
         "prefix": "TCGetDB",
         "body": [
             "TCGetDB()"
         ],
-        "description": "TCGetDB(): Recupera o tipo do banco de dados relacional, em uso, pela conexão atual com o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCGetDB."
+        "description": "Recupera o tipo do banco de dados relacional, em uso, pela conexão atual com o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCGetDB."
     },
     "TCGetDBSID": {
         "prefix": "TCGetDBSID",
         "body": [
             "TCGetDBSID()"
         ],
-        "description": "TCGetDBSID(): Retorna uma string que identifica a conexão atualmente em uso no SGDB utilizado. Veja em: https://tdn.totvs.com.br/display/tec/TCGetDBSID."
+        "description": "Retorna uma string que identifica a conexão atualmente em uso no SGDB utilizado. Veja em: https://tdn.totvs.com.br/display/tec/TCGetDBSID."
     },
     "TCGetInfo": {
         "prefix": "TCGetInfo",
         "body": [
             "TCGetInfo(${1:nInfo},${2|cParam,/*cParam*/|})"
         ],
-        "description": "TCGetInfo(<nSlot>, [cParam]): Retorna informações sobre o DBAccess atualmente conectado. Veja em: https://tdn.totvs.com.br/display/tec/TCGetInfo."
+        "description": "Retorna informações sobre o DBAccess atualmente conectado. Veja em: https://tdn.totvs.com.br/display/tec/TCGetInfo."
     },
     "TCGetIO": {
         "prefix": "TCGetIO",
         "body": [
             "TCGetIO(${1:nThreshold})"
         ],
-        "description": "TCGetIO(<nThreshold>): Retorna o número de operações de I/O realizadas pelo DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCGetIO."
+        "description": "Retorna o número de operações de I/O realizadas pelo DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCGetIO."
     },
-    "TCGetPool":{
+    "TCGetPool": {
         "prefix": "TCGetPool",
         "body": [
             "TCGetPool(${1:cPool})"
         ],
-        "description": "TCGetPool(<cPool>): Solicita ao Pool de Conexões AdvPL uma conexão com o DBAccess, previamente criada. Veja em: https://tdn.totvs.com.br/display/tec/TCGetPool."
+        "description": "Solicita ao Pool de Conexões AdvPL uma conexão com o DBAccess, previamente criada. Veja em: https://tdn.totvs.com.br/display/tec/TCGetPool."
     },
     "TCGetSID": {
         "prefix": "TCGetSID",
         "body": [
             "TCGetSID()"
         ],
-        "description": "TCGetSID(): Retorna o número do processo em uso no TOTVS | DBAccess para a conexão atual. Veja em: https://tdn.totvs.com.br/display/tec/TCGetSID."
+        "description": "Retorna o número do processo em uso no TOTVS | DBAccess para a conexão atual. Veja em: https://tdn.totvs.com.br/display/tec/TCGetSID."
     },
     "TCIsConnected": {
         "prefix": "TCIsConnected",
         "body": [
             "TCIsConnected(${1|nHwnd,/*nHwnd*/|})"
         ],
-        "description": "TCIsConnected([nHwnd]): Função para verificar se está conectado no banco de dados. Veja em: https://tdn.totvs.com.br/display/tec/TCIsConnected."
+        "description": "Função para verificar se está conectado no banco de dados. Veja em: https://tdn.totvs.com.br/display/tec/TCIsConnected."
     },
     "TCLink": {
         "prefix": "TCLink",
         "body": [
             "TCLink(${1|cConn,/*cConn*/|},${2|cServerAddr,/*cServerAddr*/|},${3|nPort,/*nPort*/|})"
         ],
-        "description": "TCLink([cConn], [cServerAddr], [nPort]): Cria uma nova conexão com um banco de dados SGBD através do DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCLink."
+        "description": "Cria uma nova conexão com um banco de dados SGBD através do DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCLink."
     },
-}   
+    "TCMaxMap": {
+        "prefix": "TCMaxMap",
+        "body": [
+            "TCMaxMap(${1:cNum})"
+        ],
+        "description": "Altera o valor minimo de campos da tabela para realizar o TCSrvMap. Veja em: https://tdn.totvs.com.br/display/tec/TCMaxMap."
+    },
+    "TCDelIndex": {
+        "prefix": "TCDelIndex",
+        "body": [
+            "TCDelIndex(${1:cTable},${2:cIndex})"
+        ],
+        "description": "Exclui um índice de um arquivo do banco de dados relacional por meio do DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCDelIndex."
+    },
+    "TCObject": {
+        "prefix": "TCObject",
+        "body": [
+            "TCObject(${1:cObject},${2|cType,/*@cType*/|})"
+        ],
+        "description": "Informa se um objeto existe no SGBD conectado. Veja em: https://tdn.totvs.com.br/display/tec/TCObject."
+    },
+    "TCPing": {
+        "prefix": "TCPing",
+        "body": [
+            "TCPing(${1:nCount})"
+        ],
+        "description": "Recupera a latência entre o DBAccess e o SGDB. Veja em: https://tdn.totvs.com.br/display/tec/TCPing"
+    },
+    "TCQuit": {
+        "prefix": "TCQuit",
+        "body": [
+            "TCQuit()"
+        ],
+        "description": "Finaliza todas as conexões ativas. Veja em: https://tdn.totvs.com.br/display/tec/TCQuit."
+    },
+    "TCPoolInfo": {
+        "prefix": "TCPoolInfo",
+        "body": [
+            "TCPoolInfo()"
+        ],
+        "description": "Retornar um array contendo informações de todas as conexões do Pool de Conexão AdvPL. Veja em: https://tdn.totvs.com.br/display/tec/TCPoolInfo."
+    },
+    "TCRefresh": {
+        "prefix": "TCRefresh",
+        "body": [
+            "TCRefresh(${1:cTable})"
+        ],
+        "description": "Atualiza as definições globais de uma tabela no cache de definições do DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCRefresh."
+    },
+    "TCSPExec": {
+        "prefix": "TCSPExec",
+        "body": [
+            "TCSPExec(${1:cStoredProcedure},${2|xParam,/*xParam*/|})"
+        ],
+        "description": "Função que executa uma stored procedure no banco de dados atual. Veja em: https://tdn.totvs.com.br/display/tec/TCSPExec."
+    },
+    "TCSPExist": {
+        "prefix": "TCSPExist",
+        "body": [
+            "TCSPExist(${1:cStoredProc})"
+        ],
+        "description": "Função verifica a existência de uma stored procedure no banco de dados atual. Veja em: https://tdn.totvs.com.br/display/tec/TCSPExist."
+    },
+    "TCSqlError": {
+        "prefix": "TCSqlError",
+        "body": [
+            "TCSqlError()"
+        ],
+        "description": "Recupera uma string contendo a última ocorrência de erro de execução de statement e/ou operação. Veja em: https://tdn.totvs.com.br/display/tec/TCSQLError."
+    },
+    "TCSqlExec": {
+        "prefix": "TCSqlExec",
+        "body": [
+            "TCSqlExec(${1:cStatement})"
+        ],
+        "description": "Executa uma sintaxe de sentença SQL (Linguagem de Consulta Estruturada). Veja em: https://tdn.totvs.com.br/display/tec/TCSQLExec."
+    },
+    "TCSQLReplay": {
+        "prefix": "TCSQLReplay",
+        "body": [
+            "TCSQLReplay(${1:nOption},${2:@cMessage})"
+        ],
+        "description": "Permite habilitar e desabilitar a coleta de logs do rastreamento de execuções do DBaccess via TOTVS | Application Server das conexões ativas do processo atual. Veja em: https://tdn.totvs.com.br/display/tec/TCSQLReplay."
+    },
+    "TCSqlToArr": {
+        "prefix": "TCSqlToArr",
+        "body": [
+            "TCSqlToArr(${1:cQuery},${2:@aResult},${3|aBinds,/*aBinds*/|},${4|aSetFields,/*aSetFields*/|},${5|aQryStru,/*aQryStru*/|})"
+        ],
+        "description": "Permite a abertura de uma query diretamente no banco de dados, trazendo os resultados em um array. Veja em: https://tdn.totvs.com.br/display/tec/TCSqlToArr."
+    },
+    "TCSetConn": {
+        "prefix": "TCSetConn",
+        "body": [
+            "TCSetConn(${1:nHandle})"
+        ],
+        "description": "Permite alternar entre as conexões ativas com o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCSetConn."
+    },
+    "TCSetField": {
+        "prefix": "TCSetField",
+        "body": [
+            "TCSetField(${1:cAlias},${2:cField},${3:cType},${4|nSize,/*nSize*/|},${5|nPrecision,/*nPrecision*/|})"
+        ],
+        "description": "Altera o tratamento, o tipo de dados ou a precisão de um campo/coluna retornado por uma consulta. Veja em: https://tdn.totvs.com.br/display/tec/TCSetField."
+    },
+    "TCSetParam": {
+        "prefix": "TCSetParam",
+        "body": [
+            "TCSetParam(${1:cParam},${2:cValue})"
+        ],
+        "description": "Insere ou atualiza um parâmetro no TOP_PARAM. Veja em: https://tdn.totvs.com.br/display/tec/TCSetParam."
+    },
+    "TCSetVIdx": {
+        "prefix": "TCSetVIdx",
+        "body": [
+            "TCSetVIdx(${1|.T.,.F.,/*lSet*/|})"
+        ],
+        "description": "Ativa ou desativa o modo de virtualização automática dos índices em tempo de execução. Veja em: https://tdn.totvs.com.br/display/tec/TCSetVIdx."
+    },
+    "TCSrvMap": {
+        "prefix": "TCSrvMap",
+        "body": [
+            "TCSrvMap(${1:cAlias},${2|cMap,/*cMap*/|},${2|bRefresh,/*bRefresh*/|})"
+        ],
+        "description": "Mapas dos campos de seleção no banco de dados. Veja em: https://tdn.totvs.com.br/display/tec/TCSrvMap."
+    },
+    "TCSrvType": {
+        "prefix": "TCSrvType",
+        "body": [
+            "TCSrvType()"
+        ],
+        "description": "Retorna uma string que identifica o tipo de plataforma da conexão DBAccess ativa/atual. Veja em: https://tdn.totvs.com.br/display/tec/TCSrvType."
+    },
+    "TCStruct": {
+        "prefix": "TCStruct",
+        "body": [
+            "TCStruct(${1:cName})"
+        ],
+        "description": "Retorna um array contendo a estrutura da tabela ou visualização no DBMS. Veja em: https://tdn.totvs.com.br/display/tec/TCStruct."
+    },
+    "TCUnique": {
+        "prefix": "TCUnique",
+        "body": [
+            "TCUnique(${1:cAlias},${2|cColumn,/*cColumn*/|})"
+        ],
+        "description": "Cria uma chave exclusiva para a tabela atual. Veja em: https://tdn.totvs.com.br/display/tec/TCUnique."
+    },
+    "TCUnlink": {
+        "prefix": "TCUnlink",
+        "body": [
+            "TCUnlink(${1|nHandle,/*nHandle*/|},${2|.T.,.F.,/*lVerbose*/|})"
+        ],
+        "description": "Fecha a conexão especificada com o DBAccess. Veja em: https://tdn.totvs.com.br/display/tec/TCUnlink."
+    },
+    "DBCreateIndex": {
+        "prefix": "DBCreateIndex",
+        "body": [
+            "DBCreateIndex(${1:cName},${2:cExprKey},${2|bExprKey,/*bExprKey*/|},${3|lUnique,/*lUnique*/|})"
+        ],
+        "description": "Cria um indice para Tabela/View. Veja em: https://tdn.totvs.com.br/pages/viewpage.action?pageId=269062926."
+    },
+    "TCHasView": {
+        "prefix": "TCHasView",
+        "body": [
+            "TCHasView(${1:cName})"
+        ],
+        "description": "Retorna um array com a(s) View(s) associada(s) a tabela. Veja em: https://tdn.totvs.com.br/display/tec/TCHasView."
+    },
+    "TCIsView": {
+        "prefix": "TCIsView",
+        "body": [
+            "TCHasView(${1:cName})"
+        ],
+        "description": "Função para verificar por nome se um objeto é uma view. Veja em: https://tdn.totvs.com.br/display/tec/TCIsView."
+    },
+    "TCView2DB": {
+        "prefix": "TCView2DB",
+        "body": [
+            "TCView2DB(${1:cView},${2:cTable})"
+        ],
+        "description": "Função para materializar uma view e seus dados em uma tabela física. Veja em: https://tdn.totvs.com.br/display/tec/TCView2DB."
+    },
+    "TCViewMulti": {
+        "prefix": "TCViewMulti",
+        "body": [
+            "TCViewMulti(${1:cView},${2:cTable},${3:cStruct})"
+        ],
+        "description": "Cria uma view para multiplas tabelas, sendo possível, mapear somente os campos que são relevantes a regra de negócio. Veja em: https://tdn.totvs.com.br/display/tec/TCViewMulti."
+    },
+    "TCViewOne": {
+        "prefix": "TCViewOne",
+        "body": [
+            "TCViewOne(${1:cView},${2:cTable})"
+        ],
+        "description": "Cria uma view para uma tabela no modelo 1 para 1, ou seja, todos os campos da tabela serão mapeados na view. Veja em: https://tdn.totvs.com.br/display/tec/TCViewOne."
+    },
+    "TCViewRen": {
+        "prefix": "TCViewRen",
+        "body": [
+            "TCViewRen(${1:cViewName},${2:cViewNewName})"
+        ],
+        "description": "Permite renomear uma View do SGBD, criada através das funções TCViewOne() e/ou TCViewMulti(). Veja em: https://tdn.totvs.com.br/display/tec/TCViewRen."
+    },
+    "TCViewStruct": {
+        "prefix": "TCViewStruct",
+        "body": [
+            "TCViewStruct(${1:cView},${2:@cTable},${3:@cStruct})"
+        ],
+        "description": "Função que recebe o nome da view como parâmetro e retorna o nome da tabela master e a estrutura da view, no formato (table,field,table,field,...). Veja em: https://tdn.totvs.com.br/display/tec/TCViewStruct."
+    },
+}
