@@ -19,6 +19,9 @@ Mais detalhes:
 ## Changelog
 
 <!-- CHANGELOG_START -->
+### v2.4.2 — 14/05/2026
+- feat: atualizar log de commits no changelog e remover versão anterior
+
 <!-- CHANGELOG_END -->
 
 ### Creditos
