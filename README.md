@@ -19,6 +19,9 @@ Mais detalhes:
 ## Changelog
 
 <!-- CHANGELOG_START -->
+### v2.4.3 — 14/05/2026
+- feat: reorganizar workflow de publicação e adicionar etapas de empacotamento e publicação da extensão
+
 ### v2.4.2 — 14/05/2026
 - feat: atualizar log de commits no changelog e remover versão anterior
 
