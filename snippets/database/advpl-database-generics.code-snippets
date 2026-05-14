@@ -570,4 +570,25 @@ https://tdn.totvs.com.br/pages/viewpage.action?pageId=6063423
         ],
         "description": "Used-Determina se há um arquivo de banco de dados em uso na área de trabalho especificada. Veja em: https://tdn.totvs.com.br/display/tec/Used."
     },
+    "FWDBCreate": {
+        "prefix": "FWDBCreate",
+        "body": [
+            "FWDBCreate( ${1:cName}, ${2:aStruct}, ${3:cDriver}, ${4:lRecnoAutoInc})"
+        ],
+        "description": "FWDBCreate - Cria um arquivo de acordo com nome, estrutura e driver passado, com a opção de utilizar recno auto-incremental quando o driver for TOPCONN. Esta função é um encapsulamento da função dbCreate. Veja em https://tdn.totvs.com/display/public/framework/FWDBCreate"
+    },
+    "MPSysOpenQuery": {
+        "prefix": "MPSysOpenQuery",
+        "body": [
+            "MPSysOpenQuery( ${1:cQuery}, ${2:cAlias}, ${3:aSetField},${4:cDriver},${5:aBindParam})"
+        ],
+        "description": "MPSysOpenQuery - Abre um alias com a query informada. Veja em https://tdn.totvs.com/display/public/framework/MPSysOpenQuery"
+    },
+	"MPSysExecScalar": {
+        "prefix": "MPSysExecScalar",
+        "body": [
+            "MPSysExecScalar( ${1:cQuery}, ${2:cColumn}, ${3:aBindParam})"
+        ],
+        "description": "MPSysExecScalar - Executa uma consulta e retorna a primeira linha no conjunto de resultados retornados pela consulta. Colunas ou linhas adicionais são ignoradas. Veja em https://tdn.totvs.com/display/public/framework/MPSysExecScalar"
+    }
 }
