@@ -41,7 +41,7 @@ jobs:
         run: |
           VERSION=$(node -p "require('./package.json').version")
           DATE=$(date +'%d/%m/%Y')
-          COMMITS=$(git log --pretty=format:"- %s" -10 --no-merges origin/main..HEAD)
+          COMMITS=$(git log --pretty=format:"- %s" -5 --no-merges HEAD~5..HEAD 2>/dev/null || git log --pretty=format:"- %s" --no-merges)
 
           ENTRY="### v$VERSION — $DATE"$'\n'"$COMMITS"$'\n'
 
