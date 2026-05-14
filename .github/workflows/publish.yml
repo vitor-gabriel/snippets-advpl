@@ -1,13 +1,10 @@
 name: Publish VSCode Extension
-
 on:
   push:
     branches:
       - main
-
 permissions:
-  contents: write        # ← permite o bot fazer push
-
+  contents: write
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -15,7 +12,7 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}   # ← usa o token do Actions
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
@@ -31,21 +28,12 @@ jobs:
       - name: Bump de versão patch
         run: npm version patch --no-git-tag-version
 
-      - name: Empacotar a extensão (.vsix)
-        run: vsce package
-
-      - name: Publicar no VS Marketplace
-        run: vsce publish -p ${{ secrets.VSCE_PAT }}
-
       - name: Atualizar Changelog no README
         run: |
           VERSION=$(node -p "require('./package.json').version")
           DATE=$(date +'%d/%m/%Y')
           COMMITS=$(git log --pretty=format:"- %s" -5 --no-merges HEAD~5..HEAD 2>/dev/null || git log --pretty=format:"- %s" --no-merges)
-
           ENTRY="### v$VERSION — $DATE"$'\n'"$COMMITS"$'\n'
-
-          # Injeta o novo entry logo após o marcador de início
           awk -v entry="$ENTRY" '
             /<!-- CHANGELOG_START -->/ {
               print
@@ -62,3 +50,9 @@ jobs:
           git add package.json README.md
           git commit -m "chore: bump version [skip ci]"
           git push
+
+      - name: Empacotar a extensão (.vsix)
+        run: vsce package
+
+      - name: Publicar no VS Marketplace
+        run: vsce publish -p ${{ secrets.VSCE_PAT }}
