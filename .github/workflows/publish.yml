@@ -37,10 +37,28 @@ jobs:
       - name: Publicar no VS Marketplace
         run: vsce publish -p ${{ secrets.VSCE_PAT }}
 
+      - name: Atualizar Changelog no README
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          DATE=$(date +'%d/%m/%Y')
+          COMMITS=$(git log --pretty=format:"- %s" -10 --no-merges origin/main..HEAD)
+
+          ENTRY="### v$VERSION — $DATE"$'\n'"$COMMITS"$'\n'
+
+          # Injeta o novo entry logo após o marcador de início
+          awk -v entry="$ENTRY" '
+            /<!-- CHANGELOG_START -->/ {
+              print
+              print entry
+              next
+            }
+            { print }
+          ' README.md > README.tmp && mv README.tmp README.md
+
       - name: Commitar versão atualizada
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add package.json
+          git add package.json README.md
           git commit -m "chore: bump version [skip ci]"
           git push

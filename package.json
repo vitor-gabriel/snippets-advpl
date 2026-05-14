@@ -3,7 +3,7 @@
   "name": "snippets-for-advpl",
   "displayName": "Snippets for ADVPL",
   "description": "Snippets para uso na linguagem ADVPL/TLPP",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "engines": {
     "vscode": "^1.80.0"
   },
