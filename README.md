@@ -19,6 +19,9 @@ Mais detalhes:
 ## Changelog
 
 <!-- CHANGELOG_START -->
+### v2.4.1 — 14/05/2026
+
+
 <!-- CHANGELOG_END -->
 
 ### Creditos
